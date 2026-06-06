@@ -16,8 +16,11 @@ export default function Logo({
   light = false,
 }: LogoProps) {
   const main = light ? "#ffffff" : "#0c6470";
-  const accent = light ? "#c4f1ea" : "#18c39a";
+  const accent = light ? "#e6fbf5" : "#18c39a";
   const sub = light ? "rgba(255,255,255,0.85)" : "#2f5f64";
+  // ID unique par variante pour éviter que plusieurs SVG partagent le même
+  // dégradé (sinon le personnage du Hero héritait du bleu de l'en-tête).
+  const gradId = light ? "logoStroke-light" : "logoStroke-dark";
 
   return (
     <span
@@ -33,7 +36,7 @@ export default function Logo({
         aria-hidden="true"
       >
         <defs>
-          <linearGradient id="logoStroke" x1="0" y1="0" x2="120" y2="0">
+          <linearGradient id={gradId} x1="0" y1="0" x2="120" y2="0">
             <stop offset="0" stopColor={main} />
             <stop offset="1" stopColor={accent} />
           </linearGradient>
@@ -43,34 +46,34 @@ export default function Logo({
           cx="60"
           cy="16"
           r="9"
-          stroke="url(#logoStroke)"
+          stroke={`url(#${gradId})`}
           strokeWidth="2.4"
         />
         {/* corps */}
         <path
           d="M60 25 L60 52"
-          stroke="url(#logoStroke)"
+          stroke={`url(#${gradId})`}
           strokeWidth="2.4"
           strokeLinecap="round"
         />
         {/* bras ouverts */}
         <path
           d="M60 33 C44 30 36 33 30 38 M60 33 C76 30 84 33 90 38"
-          stroke="url(#logoStroke)"
+          stroke={`url(#${gradId})`}
           strokeWidth="2.4"
           strokeLinecap="round"
         />
         {/* jambes */}
         <path
           d="M60 52 L52 60 M60 52 L68 60"
-          stroke="url(#logoStroke)"
+          stroke={`url(#${gradId})`}
           strokeWidth="2.4"
           strokeLinecap="round"
         />
         {/* colline ondulée */}
         <path
           d="M6 64 C34 56 50 70 60 64 C72 57 92 70 114 60"
-          stroke="url(#logoStroke)"
+          stroke={`url(#${gradId})`}
           strokeWidth="2.4"
           strokeLinecap="round"
         />

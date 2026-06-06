@@ -191,6 +191,44 @@ export const PUBLICS: Bubble[] = [
   },
 ];
 
+export const CABINET = {
+  intro:
+    "Un cocon lumineux et apaisant, pensé pour que vous vous sentiez bien dès le premier instant.",
+  description: [
+    "À Saint-Jorioz, je vous reçois dans un espace calme et chaleureux : lumière douce, musique, table de massage confortable ou fauteuil adapté.",
+    "Un coin de jeux accueille les enfants, et tout est pensé pour les tout-petits comme pour les plus grands. Vous êtes ici dans une bulle, le temps d'une parenthèse pour vous.",
+  ],
+  atouts: [
+    "Ambiance douce & cosy",
+    "Espace dédié aux enfants",
+    "Accueil de 0 à 110 ans",
+    "Confidentialité & écoute",
+  ],
+  photos: [
+    {
+      src: "/photo/cabinet3.jpeg",
+      alt: "La salle de soin avec la table de massage",
+      caption: "L'espace de soin",
+      featured: true,
+    },
+    {
+      src: "/photo/cabinet1.jpeg",
+      alt: "L'espace d'accueil du cabinet",
+      caption: "L'accueil",
+    },
+    {
+      src: "/photo/attente-enfant.jpeg",
+      alt: "Le coin jeux pour les enfants",
+      caption: "Le coin des enfants",
+    },
+    {
+      src: "/photo/cabinet2.jpeg",
+      alt: "Le bureau et les rangements du cabinet",
+      caption: "Un cocon lumineux",
+    },
+  ],
+};
+
 export const REFLEXO_INTRO = [
   "La réflexologie est une pratique manuelle qui accompagne et soulage les maux physiques et émotionnels causés par le stress, l'anxiété et les angoisses.",
   "Je stimule manuellement des zones et des points réflexes situés au niveau des pieds (réflexologie plantaire) et des mains (réflexologie palmaire). Je peux ainsi agir « à distance » sur les différents systèmes de l'organisme.",

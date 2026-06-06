@@ -5,9 +5,7 @@ import { useState } from "react";
 import Logo from "./Logo";
 
 const LINKS = [
-  { href: "/#parcours", label: "Qui suis-je" },
-  { href: "/#reflexologie", label: "La réflexologie" },
-  { href: "/#publics", label: "Pour qui" },
+  { href: "/", label: "Accueil" },
   { href: "/reservation", label: "Tarifs & Réservation" },
   { href: "/contact", label: "Contact" },
 ];

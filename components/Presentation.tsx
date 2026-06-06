@@ -70,14 +70,19 @@ export default function Presentation() {
         </div>
 
         {PARCOURS.map((b, i) => (
-          <button
+          <div
             key={b.id}
-            onClick={() => setActiveId(b.id)}
-            className="glass-card absolute flex aspect-square w-[27%] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full p-2 text-center text-xs font-semibold leading-tight text-peacock-700 shadow-bubble transition-all duration-300 hover:scale-110 hover:text-peacock-900 sm:text-sm"
+            className="absolute aspect-square w-[27%] -translate-x-1/2 -translate-y-1/2"
             style={{ left: `${positions[i].x}%`, top: `${positions[i].y}%` }}
           >
-            {b.label}
-          </button>
+            <button
+              onClick={() => setActiveId(b.id)}
+              className="animate-bubble hover-peacock glass-card flex h-full w-full items-center justify-center rounded-full p-2 text-center text-xs font-semibold leading-tight text-peacock-700 shadow-bubble sm:text-sm"
+              style={{ animationDelay: `${i * 0.5}s` }}
+            >
+              {b.label}
+            </button>
+          </div>
         ))}
       </div>
 

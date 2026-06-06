@@ -3,6 +3,7 @@ import Presentation from "@/components/Presentation";
 import Keywords from "@/components/Keywords";
 import Reflexologie from "@/components/Reflexologie";
 import Publics from "@/components/Publics";
+import Cabinet from "@/components/Cabinet";
 import FairySection from "@/components/FairySection";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Keywords />
       <Reflexologie />
       <Publics />
+      <Cabinet />
       <FairySection />
     </>
   );

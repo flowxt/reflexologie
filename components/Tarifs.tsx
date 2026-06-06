@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { TARIFS, type TarifLigne } from "@/lib/content";
+import ReserveButton from "./ReserveButton";
 
 function LigneRow({ l }: { l: TarifLigne }) {
   return (
@@ -79,10 +80,15 @@ export default function Tarifs() {
               </li>
             ))}
           </ul>
+          <ReserveButton
+            label="Réserver cette séance"
+            variant="light"
+            className="mt-6 w-full"
+          />
         </div>
 
         {/* séances suivantes */}
-        <div className="glass-card rounded-3xl p-8 shadow-soft">
+        <div className="glass-card flex flex-col rounded-3xl p-8 shadow-soft">
           <h3 className="text-xl font-bold text-peacock-800">
             Séances suivantes
           </h3>
@@ -91,13 +97,20 @@ export default function Tarifs() {
               <LigneRow key={i} l={l} />
             ))}
           </div>
+          <ReserveButton
+            label="Réserver une séance"
+            className="mt-6 w-full sm:w-auto sm:self-start"
+          />
         </div>
 
         {/* abonnements */}
         <div className="glass-card rounded-3xl p-8 shadow-soft lg:col-span-2">
-          <h3 className="text-xl font-bold text-peacock-800">
-            🔵 Abonnements
-          </h3>
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <h3 className="text-xl font-bold text-peacock-800">
+              🔵 Abonnements
+            </h3>
+            <ReserveButton label="Réserver un forfait" variant="outline" />
+          </div>
           <p className="mt-1 text-sm text-ink-soft/80">
             La 1ʳᵉ séance « Faisons connaissance » n&apos;est pas intégrable aux
             abonnements. Réglables avant le démarrage des séances.
