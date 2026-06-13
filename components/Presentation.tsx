@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import Modal from "./Modal";
 import { PARCOURS } from "@/lib/content";
@@ -69,6 +70,18 @@ export default function Presentation() {
           </div>
         </div>
 
+        {/* petite fée veillant sur la photo */}
+        <span className="animate-float-slow pointer-events-none absolute right-[12%] top-[6%] z-20 block w-[15%] min-w-[48px] drop-shadow-[0_6px_14px_rgba(12,100,112,0.3)]">
+          <Image
+            src="/element/fee2-clean.png"
+            alt=""
+            width={90}
+            height={78}
+            aria-hidden="true"
+            className="h-auto w-full"
+          />
+        </span>
+
         {PARCOURS.map((b, i) => (
           <div
             key={b.id}
@@ -84,6 +97,15 @@ export default function Presentation() {
             </button>
           </div>
         ))}
+      </div>
+
+      <div className="mt-14 flex justify-center">
+        <Link
+          href="/reservation"
+          className="rounded-full bg-peacock-gradient px-8 py-3.5 text-base font-semibold text-white shadow-bubble transition-transform hover:scale-105"
+        >
+          Réserver une séance
+        </Link>
       </div>
 
       <Modal

@@ -97,20 +97,16 @@ export default function Tarifs() {
               <LigneRow key={i} l={l} />
             ))}
           </div>
-          <ReserveButton
-            label="Réserver une séance"
-            className="mt-6 w-full sm:w-auto sm:self-start"
-          />
+          <div className="mt-auto flex justify-center pt-6">
+            <ReserveButton label="Réserver une séance" />
+          </div>
         </div>
 
         {/* abonnements */}
         <div className="glass-card rounded-3xl p-8 shadow-soft lg:col-span-2">
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <h3 className="text-xl font-bold text-peacock-800">
-              🔵 Abonnements
-            </h3>
-            <ReserveButton label="Réserver un forfait" variant="outline" />
-          </div>
+          <h3 className="text-xl font-bold text-peacock-800">
+            🔵 Abonnements
+          </h3>
           <p className="mt-1 text-sm text-ink-soft/80">
             La 1ʳᵉ séance « Faisons connaissance » n&apos;est pas intégrable aux
             abonnements. Réglables avant le démarrage des séances.
@@ -119,6 +115,9 @@ export default function Tarifs() {
             {current.abonnements.map((l, i) => (
               <LigneRow key={i} l={l} />
             ))}
+          </div>
+          <div className="mt-6 flex justify-center">
+            <ReserveButton label="Réserver un forfait" />
           </div>
         </div>
 
@@ -135,6 +134,9 @@ export default function Tarifs() {
           <p className="mt-4 text-sm text-ink-soft">
             {TARIFS.casParticuliers.note}
           </p>
+          <div className="mt-6 flex justify-center">
+            <ReserveButton label="Réserver ce suivi" />
+          </div>
         </div>
       </div>
 

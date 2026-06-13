@@ -1,3 +1,5 @@
+import Sparkles from "./Sparkles";
+
 type PageBannerProps = {
   eyebrow?: string;
   title: string;
@@ -11,6 +13,7 @@ export default function PageBanner({
 }: PageBannerProps) {
   return (
     <section className="bg-peacock-gradient relative overflow-hidden px-5 py-16 text-center text-white sm:py-20">
+      <Sparkles />
       <div className="pointer-events-none absolute -right-16 -top-10 h-72 w-72 rounded-full bg-peacock-300/30 blur-3xl" />
       <div className="relative z-10 mx-auto max-w-2xl">
         {eyebrow && (

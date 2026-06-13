@@ -20,17 +20,50 @@ export default function Hero() {
           <Logo light />
         </div>
 
-        <p className="heading-script mt-8 max-w-xl text-3xl text-shimmer sm:text-4xl">
+        <p className="heading-script mt-8 max-w-2xl text-3xl text-shimmer sm:text-4xl">
           {SITE.baseline}
         </p>
 
-        <p className="mt-5 max-w-lg text-base leading-relaxed text-peacock-50/90 sm:text-lg">
-          Sage-femme de formation devenue réflexologue, j&apos;accompagne le
-          stress, l&apos;anxiété et les angoisses — de 0 à 110 ans — à
-          Saint-Jorioz &amp; Annecy.
-        </p>
+        <div className="mt-5 max-w-xl space-y-2 text-base leading-relaxed text-peacock-50/90 sm:text-lg">
+          <p>
+            Sage-femme de formation initiale, maintenant réflexologue… mais pas
+            que ✨
+          </p>
+          <p className="font-semibold text-white">
+            Du <span className="text-shimmer">SOIN</span> au{" "}
+            <span className="text-shimmer">PRENDRE SOIN</span> ✨
+          </p>
+          <p>
+            J&apos;accompagne le{" "}
+            <strong className="font-semibold text-white">stress</strong>,
+            l&apos;<strong className="font-semibold text-white">anxiété</strong>{" "}
+            et les{" "}
+            <strong className="font-semibold text-white">angoisses</strong> :
+            leurs conséquences physiques et émotionnelles.
+          </p>
+          <p>
+            Spécialisée en{" "}
+            <strong className="font-semibold text-white">
+              neuro-réflexologie
+            </strong>
+            ,{" "}
+            <strong className="font-semibold text-white">
+              néo-réflexologie
+            </strong>{" "}
+            et suivi d&apos;
+            <strong className="font-semibold text-white">endométriose</strong>.
+          </p>
+        </div>
 
-        <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row">
+        <div className="mt-5 flex flex-col items-center gap-1">
+          <p className="text-lg font-semibold text-white">De 0 à 110 ans.</p>
+          <p className="flex items-center gap-5 text-peacock-50">
+            <span>📍 Annecy</span>
+            <span>📍 Saint-Jorioz</span>
+          </p>
+        </div>
+
+        <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row">
           <Link
             href="/reservation"
             className="rounded-full bg-white px-8 py-3.5 text-base font-semibold text-peacock-800 shadow-bubble transition-transform hover:scale-105"

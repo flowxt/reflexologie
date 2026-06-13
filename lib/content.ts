@@ -3,23 +3,27 @@
 export const SITE = {
   name: "Delphine Eminet",
   role: "Réflexologue",
-  baseline: "Du bien-être… mais pas que. Du mieux-être.",
+  baseline: "Du bien-être… mais pas que… Du mieux-être ✨",
   // Lien cal.com (à remplacer par le vrai identifiant de la cliente).
   calLink: "delphine-eminet",
-  email: "contact@delphine-reflexologie.fr",
-  phone: "",
+  email: "d.eminet@hotmail.fr",
+  phone: "06 73 40 85 45",
+  // Numéro au format international (sans le 0, sans espaces) pour WhatsApp.
+  whatsapp: "33673408545",
+  instagram: "https://www.instagram.com/delphine.eminet.reflexologue/",
+  facebook: "https://www.facebook.com/people/Delphine-Eminet/61583970764181/",
 };
 
 export const CABINETS = [
   {
     ville: "Saint-Jorioz",
     detail: "Cabinet principal",
-    horaires: "Sur rendez-vous, du lundi au samedi",
+    horaires: "Lundi, mercredi, jeudi, vendredi, samedi & dimanche",
   },
   {
     ville: "Annecy",
-    detail: "Permanence",
-    horaires: "Le mardi après-midi uniquement",
+    detail: "Sur rendez-vous",
+    horaires: "Les mardis",
   },
 ];
 
@@ -385,12 +389,13 @@ export const TARIFS = {
       },
       {
         label: "Suivi endométriose",
-        prix: "75 €",
-        note: "séance plus courte, méthode spécifique",
+        prix: "70 €",
+        note: "méthode spécifique — cure ou accompagnement obligatoire",
       },
       {
         label: "Couples hypofertilité / PMA — séance pour 2",
-        prix: "140 €",
+        prix: "130 €",
+        note: "soit 65 € par personne",
       },
     ] as TarifLigne[],
     palmaire: [
@@ -410,7 +415,7 @@ export const TARIFS = {
     "Les abonnements sont dus en totalité avant le démarrage des séances.",
     "Rapprochez-vous de votre mutuelle : la réflexologie est parfois prise en charge. Une facture vous est délivrée comme justificatif.",
     "Devis personnalisé pour toute demande particulière.",
-    "Règlements acceptés : chèques & espèces.",
+    "Règlements acceptés : carte bancaire (CB), chèques & espèces.",
     "Toute annulation doit être signalée au moins 48h à l'avance.",
   ],
 };

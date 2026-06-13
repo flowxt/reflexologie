@@ -14,8 +14,8 @@ export default function Home() {
       <Keywords />
       <Reflexologie />
       <Publics />
-      <Cabinet />
       <FairySection />
+      <Cabinet />
     </>
   );
 }

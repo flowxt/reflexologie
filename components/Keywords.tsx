@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Modal from "./Modal";
+import Sparkles from "./Sparkles";
 import { KEYWORDS } from "@/lib/content";
 
 export default function Keywords() {
@@ -10,6 +11,7 @@ export default function Keywords() {
 
   return (
     <section className="bg-peacock-gradient relative overflow-hidden px-5 py-20 text-white sm:py-28">
+      <Sparkles />
       <div className="relative z-10 mx-auto max-w-5xl">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-peacock-100">

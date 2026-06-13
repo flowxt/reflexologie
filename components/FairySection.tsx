@@ -3,9 +3,11 @@
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Modal from "./Modal";
+import Sparkles from "./Sparkles";
 import { FAIRY } from "@/lib/content";
 
-const DUST_COLORS = ["#fff7d6", "#f7e7a8", "#ffe9a8", "#ffffff", "#c4f1ea"];
+// Couleurs claires et lumineuses, bien visibles sur le fond bleu canard.
+const DUST_COLORS = ["#ffffff", "#fff7d6", "#eafff9", "#c4f1ea", "#ffe9a8"];
 
 /** Fée qui flotte et bat des ailes (animation CSS). */
 function WingedFairy({ size = 180 }: { size?: number }) {
@@ -59,8 +61,8 @@ export default function FairySection() {
       s.style.cssText = `
         position:fixed;left:${x + (Math.random() - 0.5) * 24}px;top:${y + (Math.random() - 0.5) * 16}px;
         width:${size}px;height:${size}px;border-radius:9999px;
-        background:radial-gradient(circle, ${color} 0%, rgba(255,255,255,0) 70%);
-        box-shadow:0 0 6px ${color};
+        background:radial-gradient(circle, #ffffff 0%, ${color} 45%, rgba(255,255,255,0) 72%);
+        box-shadow:0 0 10px ${color}, 0 0 4px #ffffff;
         pointer-events:none;transform:translate(-50%,-50%);
         animation:fairy-dust 900ms ease-out forwards;
         --dx:${dx}px;--dy:${dy}px;`;
@@ -86,10 +88,12 @@ export default function FairySection() {
       onMouseEnter={() => enabled && setInside(true)}
       onMouseLeave={() => setInside(false)}
       onMouseMove={enabled ? onMove : undefined}
-      className={`relative overflow-hidden bg-gradient-to-b from-peacock-50 to-white px-5 py-24 ${
+      className={`bg-peacock-gradient relative overflow-hidden px-5 py-24 text-white ${
         inside ? "cursor-none" : ""
       }`}
     >
+      <Sparkles />
+
       {/* couche de poussière de fée */}
       <div
         ref={dustLayer}
@@ -117,10 +121,10 @@ export default function FairySection() {
       )}
 
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center text-center">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-peacock-500">
+        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-peacock-100">
           Un brin de magie
         </p>
-        <h2 className="heading-script mt-3 text-4xl text-peacock-gradient sm:text-5xl">
+        <h2 className="heading-script mt-3 text-4xl text-shimmer sm:text-5xl">
           {FAIRY.title}
         </h2>
 
@@ -131,16 +135,16 @@ export default function FairySection() {
         >
           <span className="absolute -inset-6 -z-10 rounded-full bg-shimmer/40 blur-2xl" />
           <WingedFairy />
-          <span className="mt-3 block rounded-full bg-peacock-gradient px-5 py-2 text-sm font-semibold text-white shadow-bubble">
+          <span className="mt-3 block rounded-full bg-white px-5 py-2 text-sm font-semibold text-peacock-800 shadow-bubble">
             Cliquez sur la fée
           </span>
         </button>
 
-        <p className="heading-script mt-8 max-w-xl text-2xl text-peacock-700">
+        <p className="heading-script mt-8 max-w-xl text-2xl text-peacock-50">
           {FAIRY.signature}
         </p>
         {enabled && (
-          <p className="mt-3 text-sm text-ink-soft/70">
+          <p className="mt-3 text-sm text-peacock-50/70">
             Promenez votre souris ici : la fée vous suit et sème sa poussière
             d&apos;étoiles.
           </p>
