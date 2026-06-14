@@ -11,11 +11,13 @@ export default function Presentation() {
   const active = PARCOURS.find((b) => b.id === activeId) ?? null;
   const n = PARCOURS.length;
 
+  // Rayons réduits (et asymétriques) pour que les bulles, demi-largeur
+  // comprise, restent toujours dans le cadre — y compris en mobile.
   const positions = PARCOURS.map((_, i) => {
     const angle = (-90 + (360 / n) * i) * (Math.PI / 180);
     return {
-      x: 50 + 48 * Math.cos(angle),
-      y: 50 + 46 * Math.sin(angle),
+      x: 50 + 42 * Math.cos(angle),
+      y: 50 + 36 * Math.sin(angle),
     };
   });
 
@@ -114,9 +116,14 @@ export default function Presentation() {
         eyebrow={active?.label}
         title={active?.title ?? ""}
       >
-        {active?.body.map((p, i) => (
-          <p key={i}>{p}</p>
-        ))}
+        {active?.body.map((p, i) => {
+          const tight = /^[•✅]/.test(p);
+          return (
+            <p key={i} className={tight ? "mt-1.5!" : undefined}>
+              {p}
+            </p>
+          );
+        })}
       </Modal>
     </section>
   );
