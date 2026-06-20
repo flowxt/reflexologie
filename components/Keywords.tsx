@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import Modal from "./Modal";
 import Sparkles from "./Sparkles";
@@ -51,9 +52,26 @@ export default function Keywords() {
         eyebrow="Ma spécialité"
         title={active?.title ?? ""}
       >
-        {active?.body.map((p, i) => (
-          <p key={i}>{p}</p>
-        ))}
+        {active?.body.map((block, i) => {
+          if (typeof block !== "string") {
+            return (
+              <Image
+                key={i}
+                src={block.img}
+                alt={block.alt}
+                width={block.width}
+                height={block.height}
+                className="mt-3 h-auto w-full rounded-2xl border border-peacock-100 bg-white"
+              />
+            );
+          }
+          const tight = /^[-•✅]/.test(block);
+          return (
+            <p key={i} className={tight ? "mt-1.5!" : undefined}>
+              {block}
+            </p>
+          );
+        })}
       </Modal>
     </section>
   );

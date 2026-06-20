@@ -92,9 +92,12 @@ export default function Presentation() {
           >
             <button
               onClick={() => setActiveId(b.id)}
-              className="animate-bubble hover-peacock glass-card flex h-full w-full items-center justify-center rounded-full p-2 text-center text-xs font-semibold leading-tight text-peacock-700 shadow-bubble sm:text-sm"
+              className="animate-bubble hover-peacock glass-card relative flex h-full w-full items-center justify-center rounded-full p-2 text-center text-xs font-semibold leading-tight text-peacock-700 shadow-bubble sm:text-sm"
               style={{ animationDelay: `${i * 0.5}s` }}
             >
+              <span className="absolute -top-2 left-1/2 flex h-6 w-6 -translate-x-1/2 items-center justify-center rounded-full bg-peacock-gradient text-xs font-bold text-white shadow-bubble ring-2 ring-white sm:h-7 sm:w-7">
+                {i + 1}
+              </span>
               {b.label}
             </button>
           </div>

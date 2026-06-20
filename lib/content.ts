@@ -35,41 +35,56 @@ export type Bubble = {
   body: string[];
 };
 
+// Bloc de contenu : un paragraphe (string) ou une image (schéma).
+export type ContentImage = {
+  img: string;
+  alt: string;
+  width: number;
+  height: number;
+};
+export type RichBubble = Omit<Bubble, "body"> & {
+  body: (string | ContentImage)[];
+};
+
 export const PARCOURS: Bubble[] = [
   {
     id: "sage-femme",
     label: "Sage-femme",
     title: "Sage-femme de formation initiale",
     body: [
-      "Diplômée de la faculté de médecine de Dijon, j'ai commencé ma carrière dans un hôpital de niveau 1 en Savoie où j'étais polyvalente : des salles d'accouchements aux suites de couche, en passant par le service des grossesses à risque, les consultations et les accompagnements pré et post-chirurgicaux, dont les IVG.",
-      "J'ai rapidement réalisé mon rêve : m'installer comme sage-femme libérale à Saint-Jorioz, où j'ai pu exercer librement mon art, de façon holistique, avec la prévention au 🩷 de mon accompagnement.",
-      "Je me suis spécialisée dans le suivi des couples autour de la peur d'accoucher et de la gestion naturelle de la douleur (méthode Bonapace).",
-      "J'étais également référente :",
-      "• En rééducation périnéale non invasive (méthode CMP : comprendre et maîtriser son périnée), pour les femmes de tout âge.",
-      "• En suivi d'allaitement, en partenariat avec l'association Allaiter en Haute-Savoie.",
-      "• En approche alternative écologique, en expliquant l'utilisation pratique des couches lavables.",
+      "Diplômée de la faculté de médecine de Dijon, j'ai commencé ma carrière professionnelle dans un hôpital de niveau 1 en Savoie où j'étais polyvalente : des salles d'accouchements aux suites de couche, en passant par le service des grossesses à risque, les consultations et les accompagnements pré et post-chirurgicaux, dont les IVG.",
+      "J'ai rapidement réalisé mon rêve : m'installer comme sage-femme LIBÉRALE à Saint-Jorioz, où j'ai pu exercer librement mon ART, de façon HOLISTIQUE, où la PRÉVENTION était le 🩷 de mon accompagnement.",
+      "Je me suis spécialisée dans le suivi des couples autour de la PEUR d'accoucher et de la gestion naturelle de la DOULEUR (méthode Bonapace).",
+      "J'étais référente :",
+      "• En rééducation périnéale non invasive (méthode CMP : connaissance et maîtrise de son périnée), pour les femmes de tous les âges, à chaque étape de la vie.",
+      "• En suivi d'allaitement, en partenariat avec l'association « Allaiter en Haute-Savoie ».",
+      "• Dans l'utilisation pratique quotidienne des couches lavables.",
       "• En maternage proximal, en partenariat avec l'association « Porter son enfant ».",
       "…mais pas que ✨",
-      "Tous ces concepts semblent évidents ou normaux pour beaucoup de personnes en 2026, mais il y a 23 ans, c'était plutôt très précurseur 🌸",
-      "Cette période de ma vie m'a permis de développer mon expertise médicale, l'écoute et la rigueur du soin ; de multiplier les formations et de découvrir des approches complémentaires pour m'ouvrir à d'autres possibles ; et de suivre des centaines de familles durant de nombreuses années. Être sage-femme libérale dans un village, ce sont des aventures humaines extraordinaires, où sont nées des amitiés fortes qui perdurent encore aujourd'hui.",
-      "Cela m'a aussi donné envie de vivre une autre vie professionnelle… pour la découvrir, explorez la bulle Éducation.",
-      "Delphine délie les maux… les mots. La réflexologie permet de dénouer les tensions physiques et émotionnelles… mais pas que ✨ : elle aide aussi à libérer les mots.",
+      "Tous ces concepts, toutes ces démarches semblent évidents ou normaux pour un grand nombre de personnes en 2026, mais il y a 23 ans, c'était plutôt très précurseur 🌸",
+      "Cette période de pratique libérale m'a permis :",
+      "• De développer mon expertise médicale, l'écoute, la rigueur du soin.",
+      "• De développer un grand réseau avec les professionnels médicaux et tous les professionnels « alternatifs ».",
+      "• De faire beaucoup de formations et de découvrir des approches complémentaires pour m'ouvrir à d'autres possibles.",
+      "• De suivre des centaines de familles durant de nombreuses années : être sage-femme libérale dans un village m'a fait vivre des aventures humaines extraordinaires, où sont nées des amitiés fortes qui perdurent encore aujourd'hui.",
+      "Cela m'a également donné envie de vivre une autre vie professionnelle… pour la découvrir, je vous laisse explorer la bulle Éducatrice.",
     ],
   },
   {
-    id: "education",
-    label: "Éducation",
+    id: "educatrice",
+    label: "Éducatrice",
     title: "Au plus près des tout-petits et de leur famille",
     body: [
-      "Accompagnée de personnes aux profils professionnels complémentaires, j'ai réalisé un autre rêve : construire un nid bienveillant pour les enfants de moins de 3 ans.",
-      "Le Nid d'Onorés est né en janvier 2014, sous la forme d'une MAM (Maison d'Assistantes Maternelles) en pédagogie Montessori, à côté de l'École de la Vie, école Montessori à Pringy.",
-      "Toute l'équipe s'est formée à la pédagogie Montessori : diplômes AMI de la naissance à 3 ans, à l'Institut Supérieur Maria Montessori (ISMM) de Nogent-sur-Marne.",
+      "J'ai réalisé un RÊVE : celui de construire un nid BIENVEILLANT pour les enfants de moins de 3 ans.",
+      "Le Nid d'Onorés est né en janvier 2014, grâce à une équipe motivée de professionnelles aux profils complémentaires.",
+      "Nous nous sommes toutes formées à la pédagogie MONTESSORI : nous avons obtenu notre diplôme AMI de la naissance à 3 ans, à l'Institut Supérieur Maria Montessori (ISMM) de Nogent-sur-Marne.",
+      "Notre MAM (Maison d'Assistantes Maternelles en pédagogie Montessori) s'est nichée à côté de « l'École de la Vie », école Montessori à Pringy.",
       "Nous avons créé ce lieu d'accueil associatif, respectueux et bienveillant, où nous avons accompagné des centaines d'enfants et leurs familles dans cet espace-temps parfois difficile qu'est la « petite enfance ».",
       "Un lieu magnifique où j'avais une double casquette : administrative et éducative.",
       "Des années de rêve auprès des enfants et de leurs familles. Des années de travail intense, à sans cesse se remettre en question et progresser.",
       "Nos maîtres spirituels, les enfants, ont fait grandir chacun des membres de notre équipe éducative. Nous, jardinières… semions et arrosions les graines. Nous récoltons encore… aujourd'hui.",
       "Notre Nid d'Onorés a fermé ses portes en cette drôle d'année 2020.",
-      "Ce qui m'a menée vers une autre vie professionnelle, que vous découvrirez dans la bulle Formatrice.",
+      "Ce qui m'a menée à une autre vie professionnelle, que vous découvrirez dans la bulle Formatrice.",
     ],
   },
   {
@@ -77,10 +92,10 @@ export const PARCOURS: Bubble[] = [
     label: "Montessori",
     title: "Pédagogie Montessori",
     body: [
-      "Maria Montessori, sa vie, son œuvre : une découverte, il y a 20 ans.",
+      "Maria Montessori, sa vie, son œuvre : une découverte, un coup de foudre, il y a 20 ans.",
       "Je me suis formée. Je l'ai expérimentée — et je l'expérimente encore au quotidien. Je l'ai adoptée et intégrée.",
-      "L'autonomie, le respect du rythme de l'enfant, l'apprentissage indirect, la répétition, la concentration, la confiance en soi, l'intelligence du matériel… mais surtout les compétences illimitées et insoupçonnées des enfants.",
-      "Le pouvoir des graines, la beauté des fleurs…",
+      "L'autonomie, le respect du rythme de l'enfant, l'apprentissage indirect, la répétition, la concentration, la confiance en soi, l'intelligence du matériel… mais pas que ✨ … les COMPÉTENCES ILLIMITÉES et INSOUPÇONNÉES des enfants.",
+      "Le pouvoir des graines, la beauté des fleurs 🌺.",
     ],
   },
   {
@@ -88,8 +103,10 @@ export const PARCOURS: Bubble[] = [
     label: "Formatrice",
     title: "Formatrice en pédagogie Montessori",
     body: [
-      "De cette extraordinaire expérience vécue au Nid d'Onorés a suivi une vie de formatrice « pratique », au sein de l'Institut Supérieur Maria Montessori (ISMM) à Nogent-sur-Marne, auprès des (futurs) professionnels de la petite enfance.",
-      "Puis… la vie, ses surprises, ses rebondissements — et ma nouvelle vie professionnelle, que vous découvrirez dans la bulle Réflexologue.",
+      "De cette extraordinaire expérience vécue au Nid d'Onorés, et accompagnée d'une de mes collègues — mon binôme depuis 12 ans — nous avons créé l'entité « Adélie des Mots ».",
+      "Formatrices « pratique » pour l'Institut Supérieur Maria Montessori (ISMM) à Nogent-sur-Marne, nous intervenions auprès des (futurs) professionnels de la petite enfance, ainsi qu'auprès des familles à domicile.",
+      "Puis… la vie, ses surprises, ses rebondissements… L'ADAPTABILITÉ est devenue une de mes principales qualités !",
+      "Je suis devenue RÉFLEXOLOGUE.",
     ],
   },
   {
@@ -97,11 +114,13 @@ export const PARCOURS: Bubble[] = [
     label: "Réflexologue",
     title: "La réflexologie, une évidence",
     body: [
-      "La vie… ses hauts, ses bas… j'avance. Et tout à coup, l'évidence : la réflexologie revient dans ma vie — le boomerang que j'attrape au vol.",
-      "Je me forme chez Serenity Formation, en neuro-réflexologie (Nadine Jedrey et Sergio Mesa).",
-      "La réflexologie, comme la résultante de toutes mes vies professionnelles. Du SOIN au PRENDRE SOIN, étage bien-être.",
+      "J'avance sur les chemins surprenants de la vie.",
+      "Et tout à coup, l'ÉVIDENCE : la réflexologie revient dans ma vie… le boomerang que je décide d'attraper au vol et de ne plus lâcher.",
+      "Je me forme chez Serenity Formation, en neuro-réflexologie ® (Nadine Jedrey et Sergio Mesa).",
+      "La réflexologie, comme la RÉSULTANTE de toutes mes vies professionnelles. Du SOIN au PRENDRE SOIN, étage BIEN-ÊTRE.",
       "La réflexologie coche toutes MES cases :",
-      "✅ Prise en charge holistique",
+      "✅ Prise en charge holistique de tous les êtres humains",
+      "✅ Pratique manuelle par le toucher",
       "✅ Non invasive",
       "✅ Non médicamenteuse",
       "✅ Respectueuse",
@@ -109,22 +128,37 @@ export const PARCOURS: Bubble[] = [
       "✅ Préventive",
       "✅ Complémentaire",
       "✅ En partenariat avec le monde médical",
-      "« Ce ne sont pas les montagnes devant vous qui vous fatiguent, c'est le caillou dans votre chaussure. » — Muhammad Ali",
-      "Stress, anxiété, angoisses : trouvez la force dans vos pieds.",
+      "✅ Des consultations particulières où l'on a le temps",
+      "Je peux RETROUVER tous les « publics » que je connais : femmes, femmes enceintes, nouveau-nés, enfants. Et m'ouvrir au monde masculin, à la vieillesse et aux personnes en situation de handicap.",
+      "Quelle RICHESSE !",
     ],
   },
 ];
 
 // Les 3 mots à mettre en valeur
-export const KEYWORDS: Bubble[] = [
+export const KEYWORDS: RichBubble[] = [
   {
     id: "stress",
     label: "Stress",
     title: "Le stress",
     body: [
-      "La réflexologie est une pratique manuelle de relaxation qui accompagne et soulage les maux physiques et émotionnels causés par le stress.",
-      "Le réflexologue est un praticien de la gestion du stress : en stimulant les zones réflexes des pieds et des mains, j'aide votre système nerveux autonome à retrouver son équilibre.",
-      "Changements, examens, pression du quotidien… le stress s'installe. Mon rôle est de relâcher les tensions et de vous aider à mieux le vivre.",
+      "Le stress est une réaction physique et psychologique à des pressions ou des défis perçus dans l'environnement.",
+      "Il se manifeste lorsque l'individu ressent que les demandes de son environnement dépassent ses capacités ou ses ressources pour y faire face.",
+      "Le stress peut être déclenché par :",
+      "• Des événements ponctuels, comme un accident, un examen ou une présentation importante.",
+      "• Des situations prolongées, telles que des difficultés professionnelles ou familiales.",
+      "Biologiquement, le stress provoque la libération d'hormones comme l'adrénaline et le cortisol. Ces hormones préparent le corps à réagir par la réaction de « lutte ou fuite », augmentant la fréquence cardiaque, la tension musculaire et le niveau d'alerte — ce qui est bénéfique, car cela fournit la motivation et l'énergie pour relever des défis.",
+      "En revanche, le stress chronique ou excessif peut avoir des effets néfastes sur la santé physique et mentale. Il peut contribuer à des troubles tels que l'anxiété ou la dépression, et impacter tous les systèmes de l'organisme : symptômes physiques, déséquilibres, maladies ou fragilisation de la santé mentale.",
+      "La gestion du stress implique souvent différentes stratégies complémentaires :",
+      "• L'exercice physique",
+      "• La relaxation",
+      "• Les techniques de gestion du temps",
+      "• Le soutien social",
+      "• La thérapie comportementale",
+      "• La médication",
+      "La réflexologie s'inscrit totalement dans ces diverses propositions, en tant que pratique manuelle de relaxation.",
+      "La neuro-réflexologie ®, à laquelle je suis formée, agit directement sur le système nerveux central afin de rééquilibrer les différents systèmes — donc les conséquences physiques et émotionnelles.",
+      "Je suis spécialiste de la gestion du stress, et ma technique de travail est tout à fait compatible avec d'autres approches.",
     ],
   },
   {
@@ -132,9 +166,20 @@ export const KEYWORDS: Bubble[] = [
     label: "Anxiété",
     title: "L'anxiété",
     body: [
-      "L'anxiété est souvent la conséquence d'un stress prolongé et aggravé.",
-      "Au fil des séances, le système nerveux se ré-équilibre, les tensions se relâchent et l'esprit s'apaise.",
-      "C'est la fréquence et la régularité des séances qui renforcent durablement les effets positifs.",
+      "L'anxiété est une émotion caractérisée par des sentiments d'inquiétude, de nervosité et de peur, souvent en anticipation d'un événement futur incertain ou en réaction à une situation perçue comme menaçante.",
+      "Bien que l'anxiété soit une réaction naturelle et parfois utile face à des défis ou des dangers — elle stimule l'attention et la préparation —, elle peut devenir problématique lorsqu'elle est excessive, persistante et disproportionnée par rapport à la situation déclenchante.",
+      "Dans ces cas, l'anxiété peut entraver le fonctionnement quotidien, affectant les relations sociales, le travail, les études et la qualité de vie globale.",
+      "Les troubles anxieux constituent un groupe de conditions psychiatriques où l'anxiété devient chronique et envahissante : trouble d'anxiété généralisée, trouble panique, phobies, trouble d'anxiété sociale, trouble de stress post-traumatique, entre autres.",
+      "Ce sont parmi les problèmes de santé mentale les plus courants, et ils peuvent s'accompagner de symptômes physiques tels que palpitations, sueurs, tremblements et fatigue.",
+      "La prise en charge de l'anxiété et des troubles anxieux peut inclure :",
+      "• Des techniques de relaxation",
+      "• Des stratégies de gestion du stress",
+      "• Des thérapies comportementales et cognitives",
+      "• Des médicaments",
+      "Ces différentes approches permettent aux personnes affectées de retrouver un équilibre et de mener une vie plus sereine.",
+      "La réflexologie s'inscrit totalement dans ces diverses propositions, en tant que pratique manuelle de relaxation.",
+      "La neuro-réflexologie ®, à laquelle je suis formée, agit directement sur le système nerveux central afin de rééquilibrer les différents systèmes — donc les conséquences physiques et émotionnelles.",
+      "Je suis spécialiste de la gestion du stress et de l'anxiété, et ma technique de travail est tout à fait compatible avec d'autres approches.",
     ],
   },
   {
@@ -142,9 +187,40 @@ export const KEYWORDS: Bubble[] = [
     label: "Angoisse",
     title: "Les angoisses",
     body: [
-      "Les angoisses se nichent autant dans le corps que dans la tête : boule au ventre, gorge serrée, sommeil agité…",
-      "La réflexologie agit « à distance » sur l'ensemble des systèmes du corps pour apaiser ces manifestations.",
-      "Un espace d'écoute, sans jugement et sans chronomètre, où la parole est accueillie autant que le geste.",
+      "Une attaque de panique, communément appelée crise d'angoisse, est une manifestation aiguë d'anxiété qui peut survenir sans déclencheur apparent.",
+      "Il s'agit d'un épisode soudain de détresse, de peur ou d'inconfort intense, qui s'accompagne de symptômes physiques et psychologiques.",
+      "La crise d'angoisse est généralement associée à d'autres problèmes psychologiques comme :",
+      "• Un syndrome dépressif",
+      "• Des phobies",
+      "• Des troubles anxieux généralisés",
+      "• Des problèmes de dépendance",
+      "• Des troubles du comportement alimentaire",
+      "Une personne peut vivre l'expérience de la panique une seule fois dans sa vie, tandis que d'autres la vivront de façon récurrente. On parle alors d'un trouble panique, qui se caractérise par des attaques de panique à répétition.",
+      "Les personnes qui en souffrent développent, en l'absence de prise en charge, une inquiétude excessive à l'idée de futures attaques, et changent leurs comportements afin d'éviter les situations qui pourraient déclencher une crise.",
+      "Les symptômes de la crise d'angoisse peuvent être regroupés en deux familles : les symptômes physiques et les symptômes psychiques.",
+      {
+        img: "/photo/symptome-physique.png",
+        alt: "Schéma des symptômes physiques de la crise d'angoisse",
+        width: 601,
+        height: 678,
+      },
+      {
+        img: "/photo/symptome-emotionnel.png",
+        alt: "Schéma des symptômes psychiques de la crise d'angoisse",
+        width: 604,
+        height: 663,
+      },
+      "Stratégies de gestion au quotidien",
+      "La crise d'angoisse survenant de façon inopinée, il n'existe pas de réelle méthode de prévention. Néanmoins, pour mieux la gérer au quotidien, certaines mesures peuvent être adoptées :",
+      "• Se relaxer au travers d'exercices comme la respiration profonde, la méditation, le yoga…",
+      "• Faire de l'exercice physique régulier.",
+      "• Bien suivre son traitement et ne pas l'interrompre sans avis médical.",
+      "• Éviter de consommer des substances pouvant déclencher la crise (alcool, drogues…).",
+      "• Adopter une bonne hygiène de vie : routine de sommeil, alimentation équilibrée…",
+      "• Rechercher du soutien auprès de thérapeutes et d'associations regroupant des personnes qui souffrent aussi de crises d'angoisse.",
+      "La réflexologie s'inscrit totalement dans ces diverses propositions, en tant que pratique manuelle de relaxation.",
+      "La neuro-réflexologie ®, à laquelle je suis formée, agit directement sur le système nerveux central afin de rééquilibrer les différents systèmes — donc les conséquences physiques et émotionnelles.",
+      "Je suis spécialiste de la gestion du stress, de l'anxiété et de l'angoisse, et ma technique de travail est tout à fait compatible avec d'autres approches.",
     ],
   },
 ];
