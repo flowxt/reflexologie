@@ -18,12 +18,17 @@ export const CABINETS = [
   {
     ville: "Saint-Jorioz",
     detail: "Cabinet principal",
-    horaires: "Lundi, mercredi, jeudi, vendredi, samedi & dimanche",
+    horaires: "Lundi, mercredi, vendredi, samedi & dimanche",
   },
   {
     ville: "Annecy",
     detail: "Sur rendez-vous",
     horaires: "Les mardis",
+  },
+  {
+    ville: "À votre domicile",
+    detail: "Déplacement possible",
+    horaires: "Tous les jours de la semaine, sur rendez-vous",
   },
 ];
 
@@ -232,8 +237,15 @@ export const PUBLICS: Bubble[] = [
     label: "Grossesse & femmes enceintes",
     title: "Grossesse, accouchement & suites de couche",
     body: [
-      "Sage-femme de formation et spécialisée en néo-réflexologie, j'accompagne les femmes à chaque étape : grossesse, préparation à l'accouchement, suites de couche, allaitement.",
-      "Une parenthèse de douceur pour soulager les petits maux et accueillir sereinement bébé.",
+      "Sage-femme de formation et spécialisée en néo-réflexologie, j'accompagne les femmes et les couples dans chacune des étapes de leur parentalité.",
+      "Lors de la grossesse, les maux courants peuvent être soulagés ; les peurs et appréhensions de chacun des parents sont entendues et apaisées.",
+      "Mon expertise autour de la douleur liée à l'enfantement me permet de délier les maux… les mots, pour aller toucher du doigt les ressources de chacun.",
+      "Nous pouvons commencer la réflexologie à partir du 4ᵉ mois (début du 2ᵉ trimestre) et ce jusqu'au jour de la naissance.",
+      "Un suivi plus fréquent dans le dernier mois permettra de détendre le corps et l'esprit… aussi bien pour le père que pour la mère, et ainsi vous donner les meilleures chances d'arriver le jour J dans des conditions idéales.",
+      "La période de l'après-naissance — les suites de couche — peut être déstabilisante émotionnellement et fatiguante, tant pour la mère que pour le père… ainsi que pour le nouveau-né qui sort de sa bulle protectrice.",
+      "L'allaitement et ses possibles dysfonctionnements de démarrage, douleurs, peuvent être soutenus par la réflexologie.",
+      "Une parenthèse de douceur… mais pas que ✨ : un vrai soutien d'experte tout au long de ces bouleversements physiques, émotionnels, personnels et familiaux.",
+      "⚠️ Je ne me substitue pas au suivi médical ni à l'accompagnement proposé en préparation à la naissance par les sages-femmes.",
     ],
   },
   {
@@ -241,8 +253,22 @@ export const PUBLICS: Bubble[] = [
     label: "Nouveau-nés & nourrissons",
     title: "Nouveau-nés, nourrissons & jeunes enfants",
     body: [
-      "Spécialisation en néo-réflexologie (nouveau-nés, nourrissons, enfants).",
-      "Des gestes tout en douceur pour accompagner le sommeil, la digestion et le bien-être des tout-petits.",
+      "Je suis spécialisée en néo-réflexologie pour accompagner les enfants dès la naissance.",
+      "Mes métiers de sage-femme et d'éducatrice me permettent de « changer de lunettes » pour prendre en charge les enfants de façon globale.",
+      "Je peux compléter mon accompagnement par des conseils pratiques autour de la parentalité.",
+      "Concrètement, je peux recevoir les nouveau-nés juste après la naissance, que celle-ci ait été simple ou compliquée, dans le but de détendre le bébé.",
+      "Dans ce contexte, la famille peut également avoir besoin de lâcher émotionnellement.",
+      "⚠️ Toujours en lien avec les diagnostics posés par le médecin généraliste ou le pédiatre.",
+      "Indications possibles :",
+      "• Reflux gastro-œsophagien",
+      "• Difficultés de sommeil",
+      "• Problème de transit : constipation notamment",
+      "• Prévention des allergies",
+      "• Contexte ORL : poumons et/ou sphère ORL encombrés",
+      "• Énurésie / encoprésie",
+      "• Énervements, tensions",
+      "• Stress, anxiété",
+      "• Accompagnement émotionnel des enfants neuro-atypiques",
     ],
   },
   {
@@ -250,17 +276,83 @@ export const PUBLICS: Bubble[] = [
     label: "Adolescents & jeunes adultes",
     title: "Adolescents & jeunes adultes",
     body: [
-      "Un accompagnement spécifique « Stress » pour les adolescents et jeunes adultes : changements multiples, relations familiales et amicales, périodes d'examens (collège, lycée, permis, concours, partiels), premières amours…",
-      "La réflexologie comme base, pour traverser ces années sensibles avec plus de sérénité.",
+      "Cette période est marquée par de multiples changements physiques, accompagnés de grands 8 émotionnels.",
+      "Les études — collège, lycée, université — sont une période éprouvante avec de grands RDV : interrogations, brevet, bac, partiels, BTS, classes préparatoires…",
+      "S'y rajoutent :",
+      "• L'examen du code et le permis de conduire",
+      "• Les pressions familiales et sociales",
+      "• La valse des hormones, les premiers émois amoureux, les premières séparations…",
+      "La réflexologie, dans sa fonction détente et décharge émotionnelle, trouve sa place dans chacune de ces situations.",
+      "L'accompagnement peut s'étendre aux membres de la famille, car vivre avec des adolescents n'est pas toujours évident !",
+      "⚠️ Lors d'une séance, le jeune peut dormir, ne pas parler, écouter sa musique. Le portable sera cependant éteint pendant la séance. Contrairement à d'autres prises en charge, mon travail est efficace même s'il souhaite rester secret.",
+      "Au-delà de l'aspect thérapeutique, montrer aux jeunes qu'il existe des prises en charge holistiques et non-invasives participe à leur éducation à la santé.",
+    ],
+  },
+  {
+    id: "sportifs",
+    label: "Sportifs — Loisirs & compétitions",
+    title: "Sportifs — Loisirs & compétitions",
+    body: [
+      "Chose incroyable : quand je travaille sur vos pieds, cela équivaut à un massage du bout des cheveux à la pointe des orteils, en passant par tous les systèmes et les organes.",
+      "Pour les sportifs, j'ai accès à vos systèmes :",
+      "• Musculaire",
+      "• Articulaire",
+      "• Lymphatique",
+      "• Cardio-circulatoire",
+      "• …et tous les autres évidemment.",
+      "J'ai des PROTOCOLES SPÉCIFIQUES pour chacun de vos besoins.",
+      "Préparation physique ? Préparation mentale ? Avant ou après l'effort ?",
+      "Les deux, c'est l'idéal ! Quel que soit le sport que vous pratiquez.",
+    ],
+  },
+  {
+    id: "femmes",
+    label: "Les femmes, à chaque étape",
+    title: "Les femmes, à chaque étape de leur vie pubère",
+    body: [
+      "De l'arrivée des règles à la disparition de celles-ci.",
+      "J'accompagne toutes les FEMMES, dans tous les moments de leur vie 🩷",
+      "• La grossesse",
+      "• Les troubles hormonaux",
+      "• Les dérèglements",
+      "• Les dysfonctionnements",
+      "• Les symptômes impactants comme les bouffées de chaleur",
+      "• Les troubles urinaires : fuites urinaires, rétentions urinaires, infections urinaires à répétition…",
+      "• Les douleurs : dyspareunie, vaginisme…",
+      "• Les peurs…",
+      "Un savoir-faire nourri par ma vie de sage-femme.",
+    ],
+  },
+  {
+    id: "troubles-sexuels",
+    label: "Troubles sexuels",
+    title: "Les troubles sexuels — Masculins & Féminins",
+    body: [
+      "C'est un sujet difficile à aborder, qui touche pourtant bon nombre d'hommes et de femmes.",
+      "Chez l'HOMME, par exemple :",
+      "• Des dysfonctionnements érectiles, pouvant aller du priapisme jusqu'à l'impuissance",
+      "• Des dysfonctionnements de l'éjaculation",
+      "• L'anxiété sexuelle*",
+      "Chez la FEMME, par exemple :",
+      "• Des douleurs pendant les rapports : dyspareunie",
+      "• Des spasmes du vagin avec pénétration difficile ou impossible : vaginisme",
+      "• Une faible libido",
+      "• Des troubles orgasmiques",
+      "• L'anxiété sexuelle*",
+      "* L'anxiété sexuelle est une peur irrationnelle de ne pas être à la hauteur dans un contexte sexuel : une forme de pression interne qui empêche de se détendre et de se connecter à l'expérience présente.",
+      "J'ai des PROTOCOLES SPÉCIFIQUES adaptés à chaque besoin.",
+      "L'accompagnement global permet d'accompagner le corps, le 🩷 et l'esprit.",
     ],
   },
   {
     id: "neuro-atypiques",
-    label: "Personnes neuro-atypiques",
-    title: "Personnes neuro-atypiques",
+    label: "Neuro-atypiques — tout âge",
+    title: "Profils neuro-atypiques — tout âge",
     body: [
-      "Enfants, adolescents et adultes neuro-atypiques.",
-      "Un cadre rassurant, un rythme respectueux et une approche sensorielle adaptée à chacun.",
+      "Enfants, adolescents, adultes neuro-atypiques.",
+      "Le parcours des personnes neuro-atypiques est souvent parsemé d'embûches : à la maison, à l'école, au travail, avec son lot de difficultés relationnelles, émotionnelles, physiques et psychologiques.",
+      "Je reçois les principaux concernés, mais également leur entourage (famille, collègues, amis, professeurs) pour lâcher et souffler…",
+      "Pour essayer d'insuffler de l'harmonie dedans et dehors ✨",
     ],
   },
   {
@@ -268,8 +360,13 @@ export const PUBLICS: Bubble[] = [
     label: "Endométriose",
     title: "Suivi endométriose",
     body: [
-      "Spécialisation endométriose. La méthode de travail est spécifique : le temps de séance est plus court car l'approche diffère.",
-      "Un accompagnement complémentaire à votre parcours de santé pour mieux vivre la douleur au quotidien.",
+      "Je me suis spécialisée dans la technique de réflexologie spécifique du suivi de l'endométriose.",
+      "Le protocole est très différent des séances classiques.",
+      "Il est nécessaire de se voir :",
+      "• 2 fois / mois (avant et après les menstruations, si vous les avez)",
+      "• 3 mois d'affilée",
+      "Tarif remisé.",
+      "Un accompagnement complémentaire à votre parcours de santé pour mieux vivre la maladie au quotidien.",
     ],
   },
   {
@@ -277,17 +374,12 @@ export const PUBLICS: Bubble[] = [
     label: "Couples & PMA",
     title: "Couples en parcours d'hypofertilité / PMA",
     body: [
-      "J'accompagne les couples qui rencontrent des difficultés à avoir un enfant, ou en parcours de Procréation Médicalement Assistée (PMA).",
-      "Une séance « pour deux » pour traverser ce chemin avec plus de douceur.",
-    ],
-  },
-  {
-    id: "femmes",
-    label: "Toutes les étapes des femmes",
-    title: "Les femmes, à chaque étape de leur vie",
-    body: [
-      "De l'adolescence à la (péri)ménopause, j'accompagne les femmes dans tous les moments de leur vie.",
-      "Un savoir-faire nourri de mon parcours de sage-femme.",
+      "Si vous êtes en parcours de PMA, déjà très suivi sur le plan médical, vous pouvez venir me voir tous les deux en parallèle, en réflexologie.",
+      "Parce que ces longs parcours sont éprouvants, j'agirai sur le versant émotionnel… pour libérer le corps, le 🩷 et l'esprit : pour délier les maux / les mots.",
+      "La réflexologie ne se substitue pas au suivi médical et psychologique.",
+      "Je propose des prix remisés pour les couples, ainsi que pour les abonnements à deux.",
+      "Vous pouvez venir ensemble ou sur des temps distincts.",
+      "La réflexologie vous permettra de traverser ces longs chemins avec plus de douceur.",
     ],
   },
   {
@@ -295,8 +387,16 @@ export const PUBLICS: Bubble[] = [
     label: "Tout public — 0 à 110 ans",
     title: "De 0 à 110 ans, tout public",
     body: [
-      "Hommes, femmes, adolescents, enfants, nourrissons : la réflexologie s'adresse à tous.",
-      "Séances individuelles, en couple ou en petits ateliers spécifiques.",
+      "• Hommes",
+      "• Femmes",
+      "• LGBTQIA+",
+      "• Nouveau-nés",
+      "• Bambins",
+      "• Enfants",
+      "• Adolescents",
+      "• Personnes âgées",
+      "• Personnes en fin de vie, pour accompagner en douceur les dernières années, mois, semaines ou jours.",
+      "Les bienfaits du toucher ne sont plus à démontrer. Les scientifiques s'accordent sur le fait que c'est le moyen le plus efficace d'apaisement physique, psychologique et émotionnel… QUEL QUE SOIT L'ÂGE ET LE SEXE.",
     ],
   },
 ];
@@ -339,10 +439,40 @@ export const CABINET = {
   ],
 };
 
-export const REFLEXO_INTRO = [
-  "La réflexologie est une pratique manuelle qui accompagne et soulage les maux physiques et émotionnels causés par le stress, l'anxiété et les angoisses.",
-  "Je stimule manuellement des zones et des points réflexes situés au niveau des pieds (réflexologie plantaire) et des mains (réflexologie palmaire). Je peux ainsi agir « à distance » sur les différents systèmes de l'organisme.",
-  "Je suis formée en neuro-réflexologie° (méthode originale Nadine Jedrey et Sergio Mesa, marque déposée à l'INPI), une technique qui « informe » le système nerveux autonome pour agir de façon rapide et ciblée sur les organes.",
+export const REFLEXO_INTRO =
+  "La réflexologie est une pratique manuelle de relaxation basée sur la stimulation des zones et points réflexes situés au niveau des pieds (réflexologie plantaire) et des mains (réflexologie palmaire), sur lesquels sont projetés la plupart des organes de notre corps.";
+
+export const REFLEXO_FONCTIONNEMENT = [
+  "Je stimule manuellement des zones et des points réflexes, adaptés à vos besoins, au niveau des pieds ou des mains.",
+  "Je peux ainsi agir « à distance » sur les différents systèmes de votre organisme.",
+  "Mon toucher est appuyé : j'utilise différentes techniques, et je termine toujours par un massage bien-être de vos pieds ou de vos mains.",
+];
+
+export const REFLEXO_BUT =
+  "Maintenir l'équilibre de votre corps (HOMÉOSTASIE) ou, le cas échéant, le rééquilibrer.";
+
+export const REFLEXO_CONTRE_INDICATIONS = [
+  "Les contre-indications à la réflexologie sont rares, mais elles existent.",
+  "Lors de votre prise de rendez-vous, je vous contacterai pour préparer notre séance en amont.",
+];
+
+export const NEURO_REFLEXO = [
+  "Marque déposée à l'INPI n° 5N461K2. Méthode originale Nadine Jedrey / Sergio Mesa.",
+  "Cette nouvelle méthode est basée sur le lien existant entre le système nerveux et certains de nos organes.",
+  "À partir de la sollicitation des nerfs rachidiens, de la moelle épinière et l'action de l'hypothalamus au niveau du système nerveux périphérique, le réflexologue peut agir sur le délicat équilibre du système nerveux autonome et induire ainsi l'homéostasie.",
+];
+
+export const REFLEXO_QUIZ: { affirmation: string; match: boolean }[] = [
+  { affirmation: "Je me sens souvent stressé(e) ou tendu(e)", match: true },
+  { affirmation: "J'ai des troubles du sommeil", match: true },
+  { affirmation: "Je souffre de douleurs chroniques ou récurrentes", match: true },
+  { affirmation: "Je ressens de l'anxiété ou des angoisses régulièrement", match: true },
+  { affirmation: "J'ai des troubles digestifs (ballonnements, constipation…)", match: true },
+  { affirmation: "Je me sens épuisé(e), même après avoir dormi", match: true },
+  { affirmation: "Je traverse une période de changement difficile", match: true },
+  { affirmation: "Je cherche une approche douce et non médicamenteuse", match: true },
+  { affirmation: "Je vais très bien et n'ai aucune tension particulière", match: false },
+  { affirmation: "Je préfère les approches invasives uniquement", match: false },
 ];
 
 export const BIENFAITS = [

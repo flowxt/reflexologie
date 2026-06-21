@@ -41,8 +41,8 @@ export default function Reservation() {
           </p>
         </div>
 
-        {/* Cabinets */}
-        <div className="mt-12 grid gap-5 sm:grid-cols-2">
+        {/* Cabinets — grille 3 colonnes sur grand écran */}
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {CABINETS.map((c) => (
             <div
               key={c.ville}
@@ -63,6 +63,11 @@ export default function Reservation() {
             </div>
           ))}
         </div>
+
+        {/* Annulation en rouge, bien visible */}
+        <p className="mt-6 rounded-2xl border border-red-200 bg-red-50 px-5 py-3 text-center text-sm font-semibold text-red-600">
+          🚨 Toute annulation est à signaler au moins 48h à l&apos;avance.
+        </p>
 
         {/* Embed cal.com */}
         <div className="mt-8 overflow-hidden rounded-3xl bg-white p-2 shadow-soft">
@@ -101,7 +106,7 @@ export default function Reservation() {
           >
             Écrivez-moi
           </a>
-          . Toute annulation est à signaler au moins 48h à l&apos;avance.
+          .
         </p>
       </div>
     </section>
