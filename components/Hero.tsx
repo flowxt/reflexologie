@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import Sparkles from "./Sparkles";
+import LocationPins from "./LocationPins";
 import { SITE } from "@/lib/content";
 
 export default function Hero() {
@@ -57,10 +58,7 @@ export default function Hero() {
 
         <div className="mt-5 flex flex-col items-center gap-1">
           <p className="text-lg font-semibold text-white">De 0 à 110 ans.</p>
-          <p className="flex items-center gap-5 text-peacock-50">
-            <span>📍 Annecy</span>
-            <span>📍 Saint-Jorioz</span>
-          </p>
+          <LocationPins />
         </div>
 
         <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row">
