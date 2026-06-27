@@ -12,7 +12,69 @@ export const SITE = {
   whatsapp: "33673408545",
   instagram: "https://www.instagram.com/delphine.eminet.reflexologue/",
   facebook: "https://www.facebook.com/people/Delphine-Eminet/61583970764181/",
+  // Fiches d'avis Google
+  googleAnnecy: "https://share.google/6I991ctW5AqPrHPKf",
+  googleStJorioz: "https://share.google/2hNwXw7r6unq1bJ4F",
 };
+
+export type Avis = {
+  nom: string;
+  date: string;
+  note: number;
+  texte: string;
+};
+
+export const AVIS: Avis[] = [
+  {
+    nom: "Tatiana Fleury",
+    date: "mai 2026",
+    note: 5,
+    texte:
+      "Première séance de réflexologie avec Delphine il y a deux semaines, et je suis conquise ! Elle a travaillé sur le stress et la qualité du sommeil avec une grande douceur et un vrai savoir-faire. Les deux nuits qui ont suivi, j'ai dormi comme un bébé — c'est concret et rapide ! Une praticienne attentionnée, à l'écoute, et qui connaît bien la réflexologie. Une adresse à recommander sans hésiter.",
+  },
+  {
+    nom: "Nathalie Jacquier",
+    date: "mai 2026",
+    note: 5,
+    texte:
+      "Je suis venue consulter Delphine pour une problématique liée au sommeil et plus globalement la période de la périménopause. Dès la première séance j'ai ressenti une baisse du stress et un apaisement général, mais c'est à partir de la 3ᵉ séance que les bienfaits sur la qualité de mon sommeil se sont fait ressentir. J'ai apprécié son parcours médical : on sent la précision de la connaissance du corps. À l'écoute et bienveillante, elle termine chaque séance par un massage des pieds. Rien que pour ce moment, j'en redemande !",
+  },
+  {
+    nom: "Marion Fournier",
+    date: "juin 2026",
+    note: 5,
+    texte:
+      "Delphine permet de vivre un vrai moment pour soi. Un temps de détente et de douceur. Sa lecture du corps est juste et pertinente. Son accompagnement peut réellement améliorer des dysfonctionnements.",
+  },
+  {
+    nom: "Christine Coppel",
+    date: "juin 2026",
+    note: 5,
+    texte:
+      "Une séance avec Delphine est un grand moment de bien-être. On se sent totalement détendue. Delphine est très à l'écoute, très douce et de bon conseil.",
+  },
+  {
+    nom: "Martin LM",
+    date: "février 2026",
+    note: 5,
+    texte:
+      "J'ai eu la chance de découvrir la pratique de Delphine en réflexologie plantaire. Je suis sortie de la séance toute détendue et sereine. Ce soin est à la fois doux et puissant. Delphine prend le temps d'expliquer sa démarche, de cerner nos besoins ; elle est très à l'écoute, douce et précise. Elle nous accueille dans un environnement agréable et confortable, le tout pour finir par un massage détente qui m'a laissé une impression de « j'en re-veux » ! Merci infiniment Delphine, je vous recommande.",
+  },
+  {
+    nom: "Perrine Ferraud",
+    date: "février 2026",
+    note: 5,
+    texte:
+      "Delphine est très à l'écoute et adapte ses séances au plus près de nos besoins. La séance est douce et efficace à la fois, et se termine par un massage enveloppant des pieds qui invite à lâcher prise. Elle a su me conseiller sur des pratiques complémentaires pour prolonger le soin. Merci pour cette belle parenthèse ressourçante.",
+  },
+  {
+    nom: "Géraldine Bontemps",
+    date: "Local Guide",
+    note: 5,
+    texte:
+      "Praticienne très à l'écoute, douce. Séances efficaces pour moi.",
+  },
+];
 
 export const CABINETS = [
   {
@@ -541,8 +603,8 @@ export const TARIFS = {
       prix: "75 €",
       detail: [
         "20 min de questionnaire détaillé (offert) pour cibler vos besoins",
-        "60 min de pratique manuelle sur les pieds",
-        "10 min de retour réciproque (offert)",
+        "65 min de pratique manuelle sur les pieds",
+        "5 min de retour réciproque (offert)",
       ],
     },
     suivantes: [

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "./Logo";
+import Image from "next/image";
 import Sparkles from "./Sparkles";
 import LocationPins from "./LocationPins";
 import { SITE } from "@/lib/content";
@@ -17,8 +17,15 @@ export default function Hero() {
       <div className="pointer-events-none absolute -right-16 bottom-10 h-96 w-96 rounded-full bg-peacock-300/30 blur-3xl" />
 
       <div className="relative z-10 flex max-w-3xl flex-col items-center text-center">
-        <div className="animate-float-slow text-[60px] drop-shadow-[0_8px_30px_rgba(0,0,0,0.25)] sm:text-[92px] md:text-[112px]">
-          <Logo light />
+        <div className="animate-float-slow w-[280px] drop-shadow-[0_8px_30px_rgba(0,0,0,0.25)] sm:w-[420px] md:w-[500px]">
+          <Image
+            src="/photo/Logo-sansfond.png"
+            alt="Réflexologie — Delphine Eminet"
+            width={2440}
+            height={1069}
+            priority
+            className="h-auto w-full filter-[brightness(0)_invert(1)]"
+          />
         </div>
 
         <p className="heading-script mt-8 max-w-2xl text-3xl text-shimmer sm:text-4xl">

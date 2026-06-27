@@ -34,8 +34,7 @@ export default function Publics() {
           Des accompagnements sur-mesure
         </h2>
         <p className="mt-4 text-ink-soft">
-          De la grossesse aux aînés, en passant par les tout-petits et les
-          publics neuro-atypiques. Cliquez sur une bulle.
+          Cliquez sur une bulle pour en savoir plus.
         </p>
       </div>
 

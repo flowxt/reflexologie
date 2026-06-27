@@ -5,6 +5,7 @@ import Reflexologie from "@/components/Reflexologie";
 import Publics from "@/components/Publics";
 import Cabinet from "@/components/Cabinet";
 import FairySection from "@/components/FairySection";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -12,10 +13,11 @@ export default function Home() {
       <Hero />
       <Presentation />
       <Keywords />
+      <FairySection />
       <Reflexologie />
       <Publics />
-      <FairySection />
       <Cabinet />
+      <Testimonials />
     </>
   );
 }
