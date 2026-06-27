@@ -94,6 +94,16 @@ export default function FairySection() {
     >
       <Sparkles />
 
+      {/* Séparateur lumineux à la jonction avec « Ma spécialité » */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex justify-center px-6 pt-8 sm:pt-10">
+        <div className="relative flex w-full max-w-3xl items-center justify-center">
+          <span className="absolute inset-x-0 h-[3px] rounded-full bg-linear-to-r from-transparent via-white/80 to-transparent shadow-[0_0_18px_rgba(255,255,255,0.55)]" />
+          <span className="relative flex h-10 w-10 items-center justify-center rounded-full bg-white text-lg text-peacock-600 shadow-[0_0_22px_rgba(255,255,255,0.75)]">
+            ✦
+          </span>
+        </div>
+      </div>
+
       {/* couche de poussière de fée */}
       <div
         ref={dustLayer}
@@ -121,11 +131,6 @@ export default function FairySection() {
       )}
 
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center text-center">
-        <div className="mb-14 flex w-full max-w-sm items-center gap-4 text-shimmer">
-          <span className="h-px flex-1 bg-linear-to-r from-transparent to-white/50" />
-          <span className="text-2xl">✦</span>
-          <span className="h-px flex-1 bg-linear-to-l from-transparent to-white/50" />
-        </div>
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-peacock-100">
           Un brin de magie
         </p>
