@@ -71,7 +71,13 @@ export default function Tarifs() {
           <h3 className="mt-2 heading-script text-3xl text-shimmer">
             {current.premiere.titre}
           </h3>
-          <p className="mt-3 text-4xl font-bold">{current.premiere.prix}</p>
+          <div className="mt-4 flex items-center justify-center gap-3 rounded-2xl bg-white/15 px-5 py-4 backdrop-blur">
+            <span className="text-3xl font-bold">{current.premiere.duree}</span>
+            <span className="text-2xl text-peacock-100">—</span>
+            <span className="text-4xl font-bold text-shimmer">
+              {current.premiere.prix}
+            </span>
+          </div>
           <ul className="mt-5 space-y-2 text-peacock-50/95">
             {current.premiere.detail.map((d, i) => (
               <li key={i} className="flex items-start gap-2">

@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
-import Logo from "./Logo";
 
 const LINKS = [
   { href: "/", label: "Accueil" },
@@ -16,8 +16,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/85 shadow-soft backdrop-blur-md">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
-        <Link href="/" className="text-[26px] sm:text-[30px]">
-          <Logo withSubtitle={false} />
+        <Link href="/" aria-label="Accueil — Réflexologie Delphine Eminet">
+          <Image
+            src="/photo/Logo-sansfond.png"
+            alt="Réflexologie — Delphine Eminet"
+            width={2440}
+            height={1069}
+            priority
+            className="h-10 w-auto sm:h-12"
+          />
         </Link>
 
         <div className="hidden items-center gap-7 lg:flex">

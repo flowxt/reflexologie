@@ -49,18 +49,6 @@ export default function Hero() {
             <strong className="font-semibold text-white">angoisses</strong> :
             leurs conséquences physiques et émotionnelles.
           </p>
-          <p>
-            Spécialisée en{" "}
-            <strong className="font-semibold text-white">
-              neuro-réflexologie
-            </strong>
-            ,{" "}
-            <strong className="font-semibold text-white">
-              néo-réflexologie
-            </strong>{" "}
-            et suivi d&apos;
-            <strong className="font-semibold text-white">endométriose</strong>.
-          </p>
         </div>
 
         <div className="mt-5 flex flex-col items-center gap-1">

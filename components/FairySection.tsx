@@ -121,6 +121,11 @@ export default function FairySection() {
       )}
 
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center text-center">
+        <div className="mb-14 flex w-full max-w-sm items-center gap-4 text-shimmer">
+          <span className="h-px flex-1 bg-linear-to-r from-transparent to-white/50" />
+          <span className="text-2xl">✦</span>
+          <span className="h-px flex-1 bg-linear-to-l from-transparent to-white/50" />
+        </div>
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-peacock-100">
           Un brin de magie
         </p>

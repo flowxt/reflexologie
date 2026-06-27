@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "./Logo";
+import Image from "next/image";
 import { CABINETS, SITE } from "@/lib/content";
 
 export default function Footer() {
@@ -8,9 +8,13 @@ export default function Footer() {
       <div className="relative mx-auto max-w-6xl px-5 py-14">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <div className="text-[34px]">
-              <Logo light />
-            </div>
+            <Image
+              src="/photo/Logo-sansfond.png"
+              alt="Réflexologie — Delphine Eminet"
+              width={2440}
+              height={1069}
+              className="h-16 w-auto filter-[brightness(0)_invert(1)]"
+            />
             <p className="mt-4 max-w-xs text-sm text-peacock-200">
               {SITE.baseline}
             </p>

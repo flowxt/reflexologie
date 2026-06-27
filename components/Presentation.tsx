@@ -104,13 +104,28 @@ export default function Presentation() {
         ))}
       </div>
 
-      <div className="mt-14 flex justify-center">
+      <div className="mt-14 flex flex-col items-center gap-4">
         <Link
           href="/reservation"
           className="rounded-full bg-peacock-gradient px-8 py-3.5 text-base font-semibold text-white shadow-bubble transition-transform hover:scale-105"
         >
           Réserver une séance
         </Link>
+        <p className="max-w-xl text-center text-ink-soft">
+          Spécialisée en{" "}
+          <strong className="font-semibold text-peacock-700">
+            neuro-réflexologie
+          </strong>
+          ,{" "}
+          <strong className="font-semibold text-peacock-700">
+            néo-réflexologie
+          </strong>{" "}
+          et suivi d&apos;
+          <strong className="font-semibold text-peacock-700">
+            endométriose
+          </strong>
+          .
+        </p>
       </div>
 
       <Modal

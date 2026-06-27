@@ -499,6 +499,28 @@ export const CABINET = {
       caption: "Un cocon lumineux",
     },
   ],
+  morePhotos: [
+    {
+      src: "/photo/stjo3.jpeg",
+      alt: "Le bâtiment qui abrite le cabinet de Saint-Jorioz",
+      caption: "Le bâtiment",
+    },
+    {
+      src: "/photo/stjo-2.jpeg",
+      alt: "L'entrée du cabinet sous les arcades",
+      caption: "L'entrée",
+    },
+    {
+      src: "/photo/stjo4.jpeg",
+      alt: "L'accès au cabinet et le passage couvert",
+      caption: "L'accès",
+    },
+    {
+      src: "/photo/st-jo.jpeg",
+      alt: "Les abords et le stationnement à proximité du cabinet",
+      caption: "Aux abords",
+    },
+  ],
 };
 
 export const REFLEXO_INTRO =
@@ -599,7 +621,8 @@ export const TARIFS = {
     titre: "Réflexologie plantaire",
     icone: "🦶",
     premiere: {
-      titre: "1ʳᵉ séance « Faisons connaissance » — 1h30",
+      titre: "1ʳᵉ séance « Faisons connaissance »",
+      duree: "1h30",
       prix: "75 €",
       detail: [
         "20 min de questionnaire détaillé (offert) pour cibler vos besoins",
@@ -616,19 +639,23 @@ export const TARIFS = {
       },
     ] as TarifLigne[],
     abonnements: [
-      { label: "3 séances · −10 %", prix: "202,50 €", note: "67,50 €/séance" },
       {
-        label: "5 séances · −20 %",
+        label: "FORFAIT — 3 séances · −10 %",
+        prix: "202,50 €",
+        note: "67,50 €/séance",
+      },
+      {
+        label: "CURE — 5 séances · −20 %",
         prix: "300 €",
         note: "une séance offerte — 60 €/séance",
       },
       {
-        label: "4 saisons · −15 %",
+        label: "FORMULE 4 saisons · −15 %",
         prix: "255 €",
         note: "une séance à chaque changement de saison — 63,75 €/séance",
       },
       {
-        label: "10 séances · −25 %",
+        label: "ACCOMPAGNEMENT — 10 séances · −25 %",
         prix: "562,50 €",
         note: "2 séances offertes + 1 séance palmaire offerte — 56,25 €/séance",
       },
@@ -638,7 +665,8 @@ export const TARIFS = {
     titre: "Réflexologie palmaire",
     icone: "✋",
     premiere: {
-      titre: "1ʳᵉ séance « Faisons connaissance » — 1h",
+      titre: "1ʳᵉ séance « Faisons connaissance »",
+      duree: "1h",
       prix: "45 €",
       detail: [
         "20 min de questionnaire détaillé (offert)",
@@ -655,19 +683,23 @@ export const TARIFS = {
       },
     ] as TarifLigne[],
     abonnements: [
-      { label: "3 séances · −10 %", prix: "121,50 €", note: "40,50 €/séance" },
       {
-        label: "5 séances · −20 %",
+        label: "FORFAIT — 3 séances · −10 %",
+        prix: "121,50 €",
+        note: "40,50 €/séance",
+      },
+      {
+        label: "CURE — 5 séances · −20 %",
         prix: "180 €",
         note: "une séance offerte — 36 €/séance",
       },
       {
-        label: "4 saisons · −15 %",
+        label: "FORMULE 4 saisons · −15 %",
         prix: "153 €",
-        note: "38,25 €/séance",
+        note: "une séance à chaque changement de saison — 38,25 €/séance",
       },
       {
-        label: "10 séances · −25 %",
+        label: "ACCOMPAGNEMENT — 10 séances · −25 %",
         prix: "337,50 €",
         note: "+ 1 séance plantaire offerte — 33,75 €/séance",
       },
