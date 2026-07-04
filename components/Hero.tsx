@@ -28,31 +28,17 @@ export default function Hero() {
           />
         </div>
 
-        <p className="heading-script mt-8 max-w-2xl text-3xl text-shimmer sm:text-4xl">
+        <p className="mt-8 max-w-2xl text-lg font-medium text-white sm:text-xl">
+          Sage-femme de formation, maintenant réflexologue&nbsp;: du{" "}
+          <span className="text-shimmer font-semibold">soin</span> au{" "}
+          <span className="text-shimmer font-semibold">prendre soin</span> ✨
+        </p>
+
+        <p className="mt-4 max-w-2xl text-2xl font-semibold text-shimmer sm:text-3xl">
           {SITE.baseline}
         </p>
 
-        <div className="mt-5 max-w-xl space-y-2 text-base leading-relaxed text-peacock-50/90 sm:text-lg">
-          <p>
-            Sage-femme de formation initiale, maintenant réflexologue… mais pas
-            que ✨
-          </p>
-          <p className="font-semibold text-white">
-            Du <span className="text-shimmer">SOIN</span> au{" "}
-            <span className="text-shimmer">PRENDRE SOIN</span> ✨
-          </p>
-          <p>
-            J&apos;accompagne le{" "}
-            <strong className="font-semibold text-white">stress</strong>,
-            l&apos;<strong className="font-semibold text-white">anxiété</strong>{" "}
-            et les{" "}
-            <strong className="font-semibold text-white">angoisses</strong> :
-            leurs conséquences physiques et émotionnelles.
-          </p>
-        </div>
-
-        <div className="mt-5 flex flex-col items-center gap-1">
-          <p className="text-lg font-semibold text-white">De 0 à 110 ans.</p>
+        <div className="mt-8">
           <LocationPins />
         </div>
 

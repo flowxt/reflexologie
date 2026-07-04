@@ -89,8 +89,8 @@ export const CABINETS = [
   },
   {
     ville: "À votre domicile",
-    detail: "Déplacement possible",
-    horaires: "Tous les jours de la semaine, sur rendez-vous",
+    detail: "Déplacement possible — forfait A/R 5 €",
+    horaires: "Tous les jours, week-end compris, sur rendez-vous",
   },
 ];
 
@@ -351,6 +351,34 @@ export const PUBLICS: Bubble[] = [
     ],
   },
   {
+    id: "eco-anxiete",
+    label: "Éco-anxiété & burn-out militant",
+    title: "Éco-anxiété & burn-out militant",
+    body: [
+      "Face à l'aggravation du changement climatique, certaines personnes développent une inquiétude désignée sous le terme d'éco-anxiété, définie comme :",
+      "« Un état psychologique de détresse mentale et émotionnelle qu'un individu peut ressentir en réponse à la menace du changement climatique et aux problèmes environnementaux mondiaux. »",
+      "Les 25-34 ans sont les plus touchés. Les questions environnementales s'ajoutent aux préoccupations liées aux études, à l'emploi, au logement ou à la vie familiale.",
+      "L'éco-anxiété peut avoir des conséquences concrètes sur la vie quotidienne. Le problème apparaît lorsque cette inquiétude devient envahissante. Les manifestations sont d'ordre physique et émotionnel :",
+      "• Attaques de panique",
+      "• Angoisse",
+      "• Insomnies, troubles du sommeil",
+      "• Fatigue importante",
+      "• Pensées obsessionnelles, envahissantes sur les catastrophes environnementales et la mort",
+      "• Troubles alimentaires",
+      "• Peur, tristesse",
+      "• Impuissance, désespoir",
+      "• Colère, frustration",
+      "• Des difficultés à profiter de moments de détente",
+      "• Un isolement progressif",
+      "• Des épisodes dépressifs…",
+      "Les profils « éco-soucieux » restent capables de maintenir leur équilibre. Dans les formes plus sévères, qualifiées d'« éco-effrayées » ou d'« éco-terrifiées », il faut alors se faire aider.",
+      "Différents praticiens et médecins peuvent proposer des aides et des solutions. La réflexologie, pour la prise en charge du stress, de l'anxiété et de l'angoisse, est une carte à explorer.",
+      "S'investir pour de grandes causes est tout à fait louable : attention cependant à ne pas s'épuiser dans son « combat ».",
+      "⚠️ Attention au BURN-OUT MILITANT.",
+      "La réflexologie comme ressource pour lâcher prise et se recharger physiquement et émotionnellement.",
+    ],
+  },
+  {
     id: "sportifs",
     label: "Sportifs — Loisirs & compétitions",
     title: "Sportifs — Loisirs & compétitions",
@@ -463,64 +491,140 @@ export const PUBLICS: Bubble[] = [
   },
 ];
 
+export type CabinetPhoto = {
+  src: string;
+  alt: string;
+  caption: string;
+};
+
+export type CabinetLieu = {
+  id: string;
+  ville: string;
+  sousTitre: string;
+  description: string[];
+  atouts: string[];
+  featured: CabinetPhoto;
+  vignettes: CabinetPhoto[];
+  morePhotos: CabinetPhoto[];
+};
+
 export const CABINET = {
   intro:
-    "Un cocon lumineux et apaisant, pensé pour que vous vous sentiez bien dès le premier instant.",
-  description: [
-    "À Saint-Jorioz, je vous reçois dans un espace calme et chaleureux : lumière douce, musique, table de massage confortable ou fauteuil adapté.",
-    "Un coin de jeux accueille les enfants, et tout est pensé pour les tout-petits comme pour les plus grands. Vous êtes ici dans une bulle, le temps d'une parenthèse pour vous.",
-  ],
-  atouts: [
-    "Ambiance douce & cosy",
-    "Espace dédié aux enfants",
-    "Accueil de 0 à 110 ans",
-    "Confidentialité & écoute",
-  ],
-  photos: [
+    "Deux cocons lumineux et apaisants, pensés pour que vous vous sentiez bien dès le premier instant.",
+  lieux: [
     {
-      src: "/photo/cabinet3.jpeg",
-      alt: "La salle de soin avec la table de massage",
-      caption: "L'espace de soin",
-      featured: true,
+      id: "cabinet-saint-jorioz",
+      ville: "Saint-Jorioz",
+      sousTitre: "Le cabinet principal — lundi, mercredi, vendredi & week-end",
+      description: [
+        "À Saint-Jorioz, je vous reçois dans un espace calme et chaleureux : lumière douce, musique, table de massage confortable ou fauteuil adapté.",
+        "Un coin de jeux accueille les enfants, et tout est pensé pour les tout-petits comme pour les plus grands. Vous êtes ici dans une bulle, le temps d'une parenthèse pour vous.",
+      ],
+      atouts: [
+        "Ambiance douce & cosy",
+        "Espace dédié aux enfants",
+        "Accueil de 0 à 110 ans",
+        "Confidentialité & écoute",
+      ],
+      featured: {
+        src: "/photo/cabinet3.jpeg",
+        alt: "La salle de soin avec la table de massage à Saint-Jorioz",
+        caption: "L'espace de soin",
+      },
+      vignettes: [
+        {
+          src: "/photo/cabinet1.jpeg",
+          alt: "L'espace d'accueil du cabinet",
+          caption: "L'accueil",
+        },
+        {
+          src: "/photo/attente-enfant.jpeg",
+          alt: "Le coin jeux pour les enfants",
+          caption: "Le coin des enfants",
+        },
+        {
+          src: "/photo/cabinet2.jpeg",
+          alt: "Le bureau et les rangements du cabinet",
+          caption: "Un cocon lumineux",
+        },
+        {
+          src: "/photo/pied-nourisson.jpeg",
+          alt: "Les pieds d'un nourrisson prêts pour une séance",
+          caption: "Les tout-petits",
+        },
+      ],
+      morePhotos: [
+        {
+          src: "/photo/stjo-vu.jpg",
+          alt: "La résidence qui abrite le cabinet de Saint-Jorioz",
+          caption: "La résidence",
+        },
+        {
+          src: "/photo/stjo-entree.jpg",
+          alt: "L'entrée du cabinet de Saint-Jorioz, indiquée par une flèche",
+          caption: "L'entrée",
+        },
+        {
+          src: "/photo/stjoentree1.jpg",
+          alt: "La vitrine du cabinet avec les silhouettes de femmes",
+          caption: "La vitrine",
+        },
+        {
+          src: "/photo/stjo-plan.jpeg",
+          alt: "Le plan de la Résidence du Centre pour trouver le cabinet",
+          caption: "Le plan d'accès",
+        },
+        {
+          src: "/photo/identite-sagefemme.jpg",
+          alt: "Les silhouettes de femmes enceintes, signe d'identité de Delphine",
+          caption: "Mon signe d'identité 🩷",
+        },
+      ],
     },
     {
-      src: "/photo/cabinet1.jpeg",
-      alt: "L'espace d'accueil du cabinet",
-      caption: "L'accueil",
+      id: "cabinet-annecy",
+      ville: "Annecy",
+      sousTitre: "Sur rendez-vous — les mardis",
+      description: [
+        "À Annecy, je vous accueille le mardi dans une salle douce et apaisante, aux teintes chaleureuses, en plein cœur de la ville.",
+        "Le même accompagnement, la même écoute : seule l'adresse change.",
+      ],
+      atouts: [
+        "En cœur de ville",
+        "Salle chaleureuse",
+        "Sur rendez-vous le mardi",
+      ],
+      featured: {
+        src: "/photo/salle-annecy.jpg",
+        alt: "La salle de soin d'Annecy avec sa table de massage",
+        caption: "L'espace de soin",
+      },
+      vignettes: [
+        {
+          src: "/photo/annecy.jpeg",
+          alt: "La rue et le quartier du cabinet d'Annecy",
+          caption: "Le quartier",
+        },
+        {
+          src: "/photo/annecy1.jpeg",
+          alt: "L'entrée du cabinet d'Annecy sous les arcades",
+          caption: "L'entrée",
+        },
+        {
+          src: "/photo/annecy2.jpeg",
+          alt: "L'immeuble qui abrite le cabinet d'Annecy",
+          caption: "L'immeuble",
+        },
+      ],
+      morePhotos: [
+        {
+          src: "/photo/annecy3.jpeg",
+          alt: "Le passage couvert menant au cabinet d'Annecy",
+          caption: "L'accès",
+        },
+      ],
     },
-    {
-      src: "/photo/attente-enfant.jpeg",
-      alt: "Le coin jeux pour les enfants",
-      caption: "Le coin des enfants",
-    },
-    {
-      src: "/photo/cabinet2.jpeg",
-      alt: "Le bureau et les rangements du cabinet",
-      caption: "Un cocon lumineux",
-    },
-  ],
-  morePhotos: [
-    {
-      src: "/photo/stjo3.jpeg",
-      alt: "Le bâtiment qui abrite le cabinet de Saint-Jorioz",
-      caption: "Le bâtiment",
-    },
-    {
-      src: "/photo/stjo-2.jpeg",
-      alt: "L'entrée du cabinet sous les arcades",
-      caption: "L'entrée",
-    },
-    {
-      src: "/photo/stjo4.jpeg",
-      alt: "L'accès au cabinet et le passage couvert",
-      caption: "L'accès",
-    },
-    {
-      src: "/photo/st-jo.jpeg",
-      alt: "Les abords et le stationnement à proximité du cabinet",
-      caption: "Aux abords",
-    },
-  ],
+  ] as CabinetLieu[],
 };
 
 export const REFLEXO_INTRO =
@@ -631,11 +735,12 @@ export const TARIFS = {
       ],
     },
     suivantes: [
-      { label: "Séances suivantes (65 min)", prix: "75 €" },
+      { label: "Séance à l'unité (65 min)", prix: "75 €" },
       {
-        label: "Option +15 min de massage (pieds → genoux)",
-        prix: "+ 15 €",
-        note: "soit 1 €/min — séance de 80 min",
+        label:
+          "Option : temps supplémentaire de massage des pieds jusqu'aux genoux",
+        prix: "1 €/min",
+        note: "soit +15 min supplémentaires — 15 €",
       },
     ] as TarifLigne[],
     abonnements: [
@@ -675,11 +780,12 @@ export const TARIFS = {
       ],
     },
     suivantes: [
-      { label: "Séances suivantes (35 min)", prix: "45 €" },
+      { label: "Séance à l'unité (35 min)", prix: "45 €" },
       {
-        label: "Option +10 min de massage (mains → coudes)",
-        prix: "+ 10 €",
-        note: "soit 1 €/min — séance de 45 min",
+        label:
+          "Option : temps supplémentaire de massage des mains jusqu'aux coudes",
+        prix: "1 €/min",
+        note: "soit +10 min supplémentaires — 10 €",
       },
     ] as TarifLigne[],
     abonnements: [
@@ -741,8 +847,9 @@ export const TARIFS = {
     note: "Le système d'abonnement (−10 % / −20 % / −15 % / −25 %) s'applique aussi à tous les cas particuliers. Les options de massage supplémentaire (1 €/min) restent possibles.",
   },
   infos: [
-    "La 1ʳᵉ séance « Faisons connaissance » n'est pas intégrable aux abonnements.",
-    "Les abonnements sont dus en totalité avant le démarrage des séances.",
+    "La 1ʳᵉ séance « Faisons connaissance » se réserve à l'unité : elle ne fait pas partie des abonnements.",
+    "Les abonnements se règlent en une fois, au démarrage des séances.",
+    "Séances à domicile : forfait déplacement aller-retour au tarif unique de 5 € (périmètre de 10 km autour d'Annecy).",
     "Rapprochez-vous de votre mutuelle : la réflexologie est parfois prise en charge. Une facture vous est délivrée comme justificatif.",
     "Devis personnalisé pour toute demande particulière.",
     "Règlements acceptés : carte bancaire (CB), chèques & espèces.",

@@ -15,7 +15,7 @@ export default function ReservationPage() {
       <PageBanner
         eyebrow="Tarifs & Formules"
         title="Tarifs & Réservation"
-        subtitle="Des séances et des formules pour tous, de 0 à 110 ans. Réservez en ligne en quelques clics."
+        subtitle="Des séances et des formules pour tous. Réservez en ligne en quelques clics."
       />
       <Tarifs />
       <Reservation />

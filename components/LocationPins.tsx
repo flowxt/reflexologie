@@ -11,13 +11,13 @@ export default function LocationPins() {
     <>
       <p className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-peacock-50">
         <Link
-          href="/#cabinet"
+          href="/#cabinet-annecy"
           className="rounded-full px-1 transition-colors hover:text-white hover:underline underline-offset-4"
         >
           📍 Annecy
         </Link>
         <Link
-          href="/#cabinet"
+          href="/#cabinet-saint-jorioz"
           className="rounded-full px-1 transition-colors hover:text-white hover:underline underline-offset-4"
         >
           📍 Saint-Jorioz
@@ -42,7 +42,11 @@ export default function LocationPins() {
           une véritable séance, confortablement installé(e) chez vous.
         </p>
         <p>
-          Sur rendez-vous, je peux me déplacer tous les jours de la semaine.
+          Sur rendez-vous, je peux me déplacer tous les jours de la semaine et
+          le week-end.
+        </p>
+        <p className="text-sm font-semibold text-peacock-700">
+          * Forfait déplacement aller-retour : tarif unique de 5 €.
         </p>
       </Modal>
     </>

@@ -93,18 +93,19 @@ export default function Tarifs() {
           />
         </div>
 
-        {/* séances suivantes */}
+        {/* séances à l'unité */}
         <div className="glass-card flex flex-col rounded-3xl p-8 shadow-soft">
           <h3 className="text-xl font-bold text-peacock-800">
-            Séances suivantes
+            Séances à l&apos;unité
           </h3>
           <div className="mt-3">
             {current.suivantes.map((l, i) => (
               <LigneRow key={i} l={l} />
             ))}
           </div>
-          <div className="mt-auto flex justify-center pt-6">
-            <ReserveButton label="Réserver une séance" />
+          <div className="mt-auto flex flex-wrap justify-center gap-3 pt-6">
+            <ReserveButton label="Réserver la séance" />
+            <ReserveButton label="Réserver la séance + l'option" />
           </div>
         </div>
 
@@ -114,8 +115,10 @@ export default function Tarifs() {
             🔵 Abonnements
           </h3>
           <p className="mt-1 text-sm text-ink-soft/80">
-            La 1ʳᵉ séance « Faisons connaissance » n&apos;est pas intégrable aux
-            abonnements. Réglables avant le démarrage des séances.
+            Les abonnements concernent les séances de suivi : la toute première
+            séance « Faisons connaissance » se réserve à part, à l&apos;unité.
+            Le règlement de l&apos;abonnement s&apos;effectue en une fois, au
+            démarrage.
           </p>
           <div className="mt-4 grid gap-x-10 sm:grid-cols-2">
             {current.abonnements.map((l, i) => (
