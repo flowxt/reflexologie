@@ -14,7 +14,7 @@ export default function QuizPage() {
       <PageBanner
         eyebrow="Comprendre"
         title="Est-ce fait pour moi ?"
-        subtitle="Cliquez sur les affirmations qui vous concernent pour savoir si la réflexologie pourrait vous aider."
+        subtitle="Une question à la fois : répondez en toute spontanéité pour savoir si la réflexologie pourrait vous aider."
       />
       <Quiz />
     </>

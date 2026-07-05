@@ -650,161 +650,295 @@ export const NEURO_REFLEXO = [
   "À partir de la sollicitation des nerfs rachidiens, de la moelle épinière et l'action de l'hypothalamus au niveau du système nerveux périphérique, le réflexologue peut agir sur le délicat équilibre du système nerveux autonome et induire ainsi l'homéostasie.",
 ];
 
-export const REFLEXO_QUIZ: { affirmation: string; match: boolean }[] = [
-  { affirmation: "Je me sens souvent stressé.e ou tendu.e", match: true },
-  { affirmation: "Je suis anxieux.se", match: true },
-  { affirmation: "Je fais des crises d'angoisse", match: true },
+export const QUIZ_CATEGORY_ORDER = [
+  "Stress, sommeil & émotions",
+  "Corps & santé physique",
+  "Grossesse, naissance & post-partum",
+  "Enfants & bébés",
+  "Intimité & fertilité",
+  "Votre rapport aux soins",
+] as const;
+
+export const REFLEXO_QUIZ: {
+  affirmation: string;
+  match: boolean;
+  category: (typeof QUIZ_CATEGORY_ORDER)[number];
+}[] = [
+  {
+    affirmation: "Je me sens souvent stressé.e ou tendu.e",
+    match: true,
+    category: "Stress, sommeil & émotions",
+  },
+  {
+    affirmation: "Je suis anxieux.se",
+    match: true,
+    category: "Stress, sommeil & émotions",
+  },
+  {
+    affirmation: "Je fais des crises d'angoisse",
+    match: true,
+    category: "Stress, sommeil & émotions",
+  },
   {
     affirmation:
       "Je suis quelqu'un.e de curieux.se et j'aime découvrir de nouvelles approches préventives.",
     match: true,
+    category: "Votre rapport aux soins",
   },
-  { affirmation: "Prévenir plutôt que guérir, telle est ma devise.", match: true },
-  { affirmation: "J'ai des troubles du sommeil", match: true },
-  { affirmation: "J'ai des troubles digestifs", match: true },
-  { affirmation: "J'ai des troubles urinaires", match: true },
+  {
+    affirmation: "Prévenir plutôt que guérir, telle est ma devise.",
+    match: true,
+    category: "Votre rapport aux soins",
+  },
+  {
+    affirmation: "J'ai des troubles du sommeil",
+    match: true,
+    category: "Corps & santé physique",
+  },
+  {
+    affirmation: "J'ai des troubles digestifs",
+    match: true,
+    category: "Corps & santé physique",
+  },
+  {
+    affirmation: "J'ai des troubles urinaires",
+    match: true,
+    category: "Corps & santé physique",
+  },
   {
     affirmation: "J'ai souvent des problèmes ORL et/ou pulmonaires",
     match: true,
+    category: "Corps & santé physique",
   },
-  { affirmation: "Je suis sujet.te aux allergies", match: true },
+  {
+    affirmation: "Je suis sujet.te aux allergies",
+    match: true,
+    category: "Corps & santé physique",
+  },
   {
     affirmation: "Je suis en période de périménopause ou de ménopause.",
     match: true,
+    category: "Corps & santé physique",
   },
-  { affirmation: "Je souffre d'endométriose", match: true },
+  {
+    affirmation: "Je souffre d'endométriose",
+    match: true,
+    category: "Corps & santé physique",
+  },
   {
     affirmation:
       "J'ai des troubles circulatoires : jambes lourdes, mauvaise circulation sanguine, varices/varicosités.",
     match: true,
+    category: "Corps & santé physique",
   },
   {
     affirmation: "J'ai l'impression d'avoir une mauvaise circulation lymphatique.",
     match: true,
+    category: "Corps & santé physique",
   },
-  { affirmation: "J'ai des œdèmes", match: true },
+  {
+    affirmation: "J'ai des œdèmes",
+    match: true,
+    category: "Corps & santé physique",
+  },
   {
     affirmation: "Je suis enceinte et j'ai des maux liés à mon nouvel « état ».",
     match: true,
+    category: "Grossesse, naissance & post-partum",
   },
   {
     affirmation:
       "Je suis sportif.ve et j'ai besoin d'aide pour préparer ma compétition ou pour accélérer la récupération après celle-ci.",
     match: true,
+    category: "Corps & santé physique",
   },
   {
     affirmation:
       "Je suis enceinte et j'accouche bientôt : j'ai besoin d'un dernier coup de pouce pour me préparer physiquement et psychologiquement.",
     match: true,
+    category: "Grossesse, naissance & post-partum",
   },
-  { affirmation: "J'ai peur d'accoucher", match: true },
+  {
+    affirmation: "J'ai peur d'accoucher",
+    match: true,
+    category: "Grossesse, naissance & post-partum",
+  },
   {
     affirmation:
       "Ma femme va bientôt accoucher, j'ai besoin d'aide pour gérer mes appréhensions de futur papa.",
     match: true,
+    category: "Grossesse, naissance & post-partum",
   },
-  { affirmation: "Je suis fatigué.e", match: true },
+  {
+    affirmation: "Je suis fatigué.e",
+    match: true,
+    category: "Stress, sommeil & émotions",
+  },
   {
     affirmation:
       "J'allaite et ce n'est pas simple : fatigue, tension mammaire, lymphangite…",
     match: true,
+    category: "Grossesse, naissance & post-partum",
   },
-  { affirmation: "Je viens d'accoucher et je n'ai pas le moral.", match: true },
+  {
+    affirmation: "Je viens d'accoucher et je n'ai pas le moral.",
+    match: true,
+    category: "Grossesse, naissance & post-partum",
+  },
   {
     affirmation: "Ma femme vient d'accoucher et je n'ai pas le moral.",
     match: true,
+    category: "Grossesse, naissance & post-partum",
   },
-  { affirmation: "Prendre soin de moi est important", match: true },
+  {
+    affirmation: "Prendre soin de moi est important",
+    match: true,
+    category: "Votre rapport aux soins",
+  },
   {
     affirmation: "Mon bébé a des troubles digestifs : reflux, constipation…",
     match: true,
+    category: "Enfants & bébés",
   },
-  { affirmation: "Mon enfant dort mal", match: true },
-  { affirmation: "Mon enfant est stressé", match: true },
-  { affirmation: "J'ai des troubles sexuels", match: true },
-  { affirmation: "Mon.a conjoint.e a des troubles sexuels", match: true },
-  { affirmation: "Nous n'arrivons pas à avoir d'enfants", match: true },
-  { affirmation: "J'ai des douleurs articulaires", match: true },
-  { affirmation: "Je ne suis pas patient.e", match: false },
-  { affirmation: "Je recherche des résultats rapides", match: false },
+  {
+    affirmation: "Mon enfant dort mal",
+    match: true,
+    category: "Enfants & bébés",
+  },
+  {
+    affirmation: "Mon enfant est stressé",
+    match: true,
+    category: "Enfants & bébés",
+  },
+  {
+    affirmation: "J'ai des troubles sexuels",
+    match: true,
+    category: "Intimité & fertilité",
+  },
+  {
+    affirmation: "Mon.a conjoint.e a des troubles sexuels",
+    match: true,
+    category: "Intimité & fertilité",
+  },
+  {
+    affirmation: "Nous n'arrivons pas à avoir d'enfants",
+    match: true,
+    category: "Intimité & fertilité",
+  },
+  {
+    affirmation: "J'ai des douleurs articulaires",
+    match: true,
+    category: "Corps & santé physique",
+  },
+  {
+    affirmation: "Je ne suis pas patient.e",
+    match: false,
+    category: "Votre rapport aux soins",
+  },
+  {
+    affirmation: "Je recherche des résultats rapides",
+    match: false,
+    category: "Votre rapport aux soins",
+  },
   {
     affirmation:
       "Je recherche des méthodes prises en charge par la Sécurité sociale.",
     match: false,
+    category: "Votre rapport aux soins",
   },
   {
     affirmation:
       "Je ressens différents symptômes physiques malgré des analyses et examens médicaux normaux.",
     match: true,
+    category: "Corps & santé physique",
   },
   {
     affirmation:
       "Je ressens différents symptômes émotionnels ou psychologiques malgré des analyses et des examens médicaux normaux.",
     match: true,
+    category: "Stress, sommeil & émotions",
   },
   {
     affirmation:
       "Je dois passer des examens et j'ai peur, je suis stressé.e, angoissé.e.",
     match: true,
+    category: "Stress, sommeil & émotions",
   },
   {
     affirmation:
       "Je traverse une période de changements difficiles : sur le plan personnel, professionnel, financier…",
     match: true,
+    category: "Stress, sommeil & émotions",
   },
-  { affirmation: "J'aime les approches douces, non invasives.", match: true },
+  {
+    affirmation: "J'aime les approches douces, non invasives.",
+    match: true,
+    category: "Votre rapport aux soins",
+  },
   {
     affirmation:
       "La prise en charge globale (holistique) de tout mon être est importante.",
     match: true,
+    category: "Votre rapport aux soins",
   },
   {
     affirmation:
       "Je sais que les pratiques alternatives nécessitent souvent plusieurs séances.",
     match: true,
+    category: "Votre rapport aux soins",
   },
   {
     affirmation: "Je pense que mon système nerveux est déséquilibré.",
     match: true,
+    category: "Stress, sommeil & émotions",
   },
   {
     affirmation:
       "J'ai besoin d'un endroit où je peux ne pas parler et/ou dormir, mais que cela agisse quand même.",
     match: true,
+    category: "Stress, sommeil & émotions",
   },
   {
     affirmation:
       "Je cherche un endroit où l'on puisse accueillir mes paroles si je ressens l'envie et le besoin de parler.",
     match: true,
+    category: "Stress, sommeil & émotions",
   },
   {
     affirmation: "Je tombe souvent malade, mon système immunitaire est fragile.",
     match: true,
+    category: "Corps & santé physique",
   },
   {
     affirmation: "Mon système endocrinien (hormones) est déréglé.",
     match: true,
+    category: "Corps & santé physique",
   },
   {
     affirmation: "Je vais très bien et je n'ai aucune tension particulière.",
     match: false,
+    category: "Votre rapport aux soins",
   },
   {
     affirmation: "Je recherche des méthodes invasives et/ou médicamenteuses.",
     match: false,
+    category: "Votre rapport aux soins",
   },
   {
     affirmation: "Je recherche quelqu'un qui puisse faire des diagnostics médicaux.",
     match: false,
+    category: "Votre rapport aux soins",
   },
   {
     affirmation: "Je recherche quelqu'un qui modifie mes traitements.",
     match: false,
+    category: "Votre rapport aux soins",
   },
   {
     affirmation:
       "Je recherche quelqu'un qui me prescrive des médicaments, des examens et/ou un arrêt de travail.",
     match: false,
+    category: "Votre rapport aux soins",
   },
 ];
 
