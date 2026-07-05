@@ -102,6 +102,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/quiz"
+                  className="text-peacock-200 hover:text-white"
+                >
+                  Le quiz
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/reservation"
                   className="text-peacock-200 hover:text-white"
                 >

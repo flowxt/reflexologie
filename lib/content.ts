@@ -78,14 +78,14 @@ export const AVIS: Avis[] = [
 
 export const CABINETS = [
   {
-    ville: "Saint-Jorioz",
-    detail: "Cabinet principal",
-    horaires: "Lundi, mercredi, vendredi, samedi & dimanche",
-  },
-  {
     ville: "Annecy",
     detail: "Sur rendez-vous",
     horaires: "Les mardis",
+  },
+  {
+    ville: "Saint-Jorioz",
+    detail: "Sur rendez-vous",
+    horaires: "Lundi, mercredi, samedi & dimanche",
   },
   {
     ville: "À votre domicile",
@@ -156,7 +156,7 @@ export const PARCOURS: Bubble[] = [
   },
   {
     id: "montessori",
-    label: "Montessori",
+    label: "Pédagogie Montessori",
     title: "Pédagogie Montessori",
     body: [
       "Maria Montessori, sa vie, son œuvre : une découverte, un coup de foudre, il y a 20 ans.",
@@ -632,7 +632,7 @@ export const REFLEXO_INTRO =
 
 export const REFLEXO_FONCTIONNEMENT = [
   "Je stimule manuellement des zones et des points réflexes, adaptés à vos besoins, au niveau des pieds ou des mains.",
-  "Je peux ainsi agir « à distance » sur les différents systèmes de votre organisme.",
+  "Ainsi, j'agis à distance sur vos organes et les différents systèmes de votre organisme.",
   "Mon toucher est appuyé : j'utilise différentes techniques, et je termine toujours par un massage bien-être de vos pieds ou de vos mains.",
 ];
 
@@ -651,16 +651,161 @@ export const NEURO_REFLEXO = [
 ];
 
 export const REFLEXO_QUIZ: { affirmation: string; match: boolean }[] = [
-  { affirmation: "Je me sens souvent stressé(e) ou tendu(e)", match: true },
+  { affirmation: "Je me sens souvent stressé.e ou tendu.e", match: true },
+  { affirmation: "Je suis anxieux.se", match: true },
+  { affirmation: "Je fais des crises d'angoisse", match: true },
+  {
+    affirmation:
+      "Je suis quelqu'un.e de curieux.se et j'aime découvrir de nouvelles approches préventives.",
+    match: true,
+  },
+  { affirmation: "Prévenir plutôt que guérir, telle est ma devise.", match: true },
   { affirmation: "J'ai des troubles du sommeil", match: true },
-  { affirmation: "Je souffre de douleurs chroniques ou récurrentes", match: true },
-  { affirmation: "Je ressens de l'anxiété ou des angoisses régulièrement", match: true },
-  { affirmation: "J'ai des troubles digestifs (ballonnements, constipation…)", match: true },
-  { affirmation: "Je me sens épuisé(e), même après avoir dormi", match: true },
-  { affirmation: "Je traverse une période de changement difficile", match: true },
-  { affirmation: "Je cherche une approche douce et non médicamenteuse", match: true },
-  { affirmation: "Je vais très bien et n'ai aucune tension particulière", match: false },
-  { affirmation: "Je préfère les approches invasives uniquement", match: false },
+  { affirmation: "J'ai des troubles digestifs", match: true },
+  { affirmation: "J'ai des troubles urinaires", match: true },
+  {
+    affirmation: "J'ai souvent des problèmes ORL et/ou pulmonaires",
+    match: true,
+  },
+  { affirmation: "Je suis sujet.te aux allergies", match: true },
+  {
+    affirmation: "Je suis en période de périménopause ou de ménopause.",
+    match: true,
+  },
+  { affirmation: "Je souffre d'endométriose", match: true },
+  {
+    affirmation:
+      "J'ai des troubles circulatoires : jambes lourdes, mauvaise circulation sanguine, varices/varicosités.",
+    match: true,
+  },
+  {
+    affirmation: "J'ai l'impression d'avoir une mauvaise circulation lymphatique.",
+    match: true,
+  },
+  { affirmation: "J'ai des œdèmes", match: true },
+  {
+    affirmation: "Je suis enceinte et j'ai des maux liés à mon nouvel « état ».",
+    match: true,
+  },
+  {
+    affirmation:
+      "Je suis sportif.ve et j'ai besoin d'aide pour préparer ma compétition ou pour accélérer la récupération après celle-ci.",
+    match: true,
+  },
+  {
+    affirmation:
+      "Je suis enceinte et j'accouche bientôt : j'ai besoin d'un dernier coup de pouce pour me préparer physiquement et psychologiquement.",
+    match: true,
+  },
+  { affirmation: "J'ai peur d'accoucher", match: true },
+  {
+    affirmation:
+      "Ma femme va bientôt accoucher, j'ai besoin d'aide pour gérer mes appréhensions de futur papa.",
+    match: true,
+  },
+  { affirmation: "Je suis fatigué.e", match: true },
+  {
+    affirmation:
+      "J'allaite et ce n'est pas simple : fatigue, tension mammaire, lymphangite…",
+    match: true,
+  },
+  { affirmation: "Je viens d'accoucher et je n'ai pas le moral.", match: true },
+  {
+    affirmation: "Ma femme vient d'accoucher et je n'ai pas le moral.",
+    match: true,
+  },
+  { affirmation: "Prendre soin de moi est important", match: true },
+  {
+    affirmation: "Mon bébé a des troubles digestifs : reflux, constipation…",
+    match: true,
+  },
+  { affirmation: "Mon enfant dort mal", match: true },
+  { affirmation: "Mon enfant est stressé", match: true },
+  { affirmation: "J'ai des troubles sexuels", match: true },
+  { affirmation: "Mon.a conjoint.e a des troubles sexuels", match: true },
+  { affirmation: "Nous n'arrivons pas à avoir d'enfants", match: true },
+  { affirmation: "J'ai des douleurs articulaires", match: true },
+  { affirmation: "Je ne suis pas patient.e", match: false },
+  { affirmation: "Je recherche des résultats rapides", match: false },
+  {
+    affirmation:
+      "Je recherche des méthodes prises en charge par la Sécurité sociale.",
+    match: false,
+  },
+  {
+    affirmation:
+      "Je ressens différents symptômes physiques malgré des analyses et examens médicaux normaux.",
+    match: true,
+  },
+  {
+    affirmation:
+      "Je ressens différents symptômes émotionnels ou psychologiques malgré des analyses et des examens médicaux normaux.",
+    match: true,
+  },
+  {
+    affirmation:
+      "Je dois passer des examens et j'ai peur, je suis stressé.e, angoissé.e.",
+    match: true,
+  },
+  {
+    affirmation:
+      "Je traverse une période de changements difficiles : sur le plan personnel, professionnel, financier…",
+    match: true,
+  },
+  { affirmation: "J'aime les approches douces, non invasives.", match: true },
+  {
+    affirmation:
+      "La prise en charge globale (holistique) de tout mon être est importante.",
+    match: true,
+  },
+  {
+    affirmation:
+      "Je sais que les pratiques alternatives nécessitent souvent plusieurs séances.",
+    match: true,
+  },
+  {
+    affirmation: "Je pense que mon système nerveux est déséquilibré.",
+    match: true,
+  },
+  {
+    affirmation:
+      "J'ai besoin d'un endroit où je peux ne pas parler et/ou dormir, mais que cela agisse quand même.",
+    match: true,
+  },
+  {
+    affirmation:
+      "Je cherche un endroit où l'on puisse accueillir mes paroles si je ressens l'envie et le besoin de parler.",
+    match: true,
+  },
+  {
+    affirmation: "Je tombe souvent malade, mon système immunitaire est fragile.",
+    match: true,
+  },
+  {
+    affirmation: "Mon système endocrinien (hormones) est déréglé.",
+    match: true,
+  },
+  {
+    affirmation: "Je vais très bien et je n'ai aucune tension particulière.",
+    match: false,
+  },
+  {
+    affirmation: "Je recherche des méthodes invasives et/ou médicamenteuses.",
+    match: false,
+  },
+  {
+    affirmation: "Je recherche quelqu'un qui puisse faire des diagnostics médicaux.",
+    match: false,
+  },
+  {
+    affirmation: "Je recherche quelqu'un qui modifie mes traitements.",
+    match: false,
+  },
+  {
+    affirmation:
+      "Je recherche quelqu'un qui me prescrive des médicaments, des examens et/ou un arrêt de travail.",
+    match: false,
+  },
 ];
 
 export const BIENFAITS = [
@@ -710,7 +855,7 @@ export const FAIRY = {
     "C'est la fréquence et la régularité qui ancrent les effets positifs, en profondeur et durablement.",
     "Une première séance fait souvent beaucoup de bien ; ce sont les suivantes qui transforment le bien-être en mieux-être.",
   ],
-  signature: "Soulage, écoute, apaise, libère, délie… les maux et les mots.",
+  signature: "Delphine : soulage, écoute, apaise, libère, délie… les maux et les mots.",
 };
 
 // ---------------------------------------------------------------------------
@@ -747,22 +892,22 @@ export const TARIFS = {
       {
         label: "FORFAIT — 3 séances · −10 %",
         prix: "202,50 €",
-        note: "67,50 €/séance",
+        note: "Soit 67,50 €/séance",
       },
       {
         label: "CURE — 5 séances · −20 %",
         prix: "300 €",
-        note: "une séance offerte — 60 €/séance",
+        note: "Soit 60 €/séance (ce qui revient à une séance offerte)",
       },
       {
         label: "FORMULE 4 saisons · −15 %",
         prix: "255 €",
-        note: "une séance à chaque changement de saison — 63,75 €/séance",
+        note: "Une séance à chaque changement de saison, soit 63,75 €/séance",
       },
       {
         label: "ACCOMPAGNEMENT — 10 séances · −25 %",
         prix: "562,50 €",
-        note: "2 séances offertes + 1 séance palmaire offerte — 56,25 €/séance",
+        note: "Soit 56,25 €/séance (ce qui revient à 2 séances offertes) 🎁 + 1 séance de réflexologie palmaire offerte",
       },
     ] as TarifLigne[],
   },
@@ -792,22 +937,22 @@ export const TARIFS = {
       {
         label: "FORFAIT — 3 séances · −10 %",
         prix: "121,50 €",
-        note: "40,50 €/séance",
+        note: "Soit 40,50 €/séance",
       },
       {
         label: "CURE — 5 séances · −20 %",
         prix: "180 €",
-        note: "une séance offerte — 36 €/séance",
+        note: "Soit 36 €/séance (ce qui revient à une séance offerte)",
       },
       {
         label: "FORMULE 4 saisons · −15 %",
         prix: "153 €",
-        note: "une séance à chaque changement de saison — 38,25 €/séance",
+        note: "Une séance à chaque changement de saison, soit 38,25 €/séance",
       },
       {
         label: "ACCOMPAGNEMENT — 10 séances · −25 %",
         prix: "337,50 €",
-        note: "+ 1 séance plantaire offerte — 33,75 €/séance",
+        note: "Soit 33,75 €/séance (ce qui revient à 2 séances offertes) 🎁 + 1 séance de réflexologie plantaire offerte",
       },
     ] as TarifLigne[],
   },
@@ -853,6 +998,6 @@ export const TARIFS = {
     "Rapprochez-vous de votre mutuelle : la réflexologie est parfois prise en charge. Une facture vous est délivrée comme justificatif.",
     "Devis personnalisé pour toute demande particulière.",
     "Règlements acceptés : carte bancaire (CB), chèques & espèces.",
-    "Toute annulation doit être signalée au moins 48h à l'avance.",
+    "Toute annulation doit être signalée au moins 48h à l'avance ; passé ce délai, la séance reste due.",
   ],
 };

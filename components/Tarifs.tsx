@@ -117,8 +117,8 @@ export default function Tarifs() {
           <p className="mt-1 text-sm text-ink-soft/80">
             Les abonnements concernent les séances de suivi : la toute première
             séance « Faisons connaissance » se réserve à part, à l&apos;unité.
-            Le règlement de l&apos;abonnement s&apos;effectue en une fois, au
-            démarrage.
+            Le règlement s&apos;effectue en une fois au démarrage, ou en
+            plusieurs fois si besoin — n&apos;hésitez pas à m&apos;en parler.
           </p>
           <div className="mt-4 grid gap-x-10 sm:grid-cols-2">
             {current.abonnements.map((l, i) => (

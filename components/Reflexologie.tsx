@@ -1,6 +1,4 @@
-"use client";
-
-import { useState } from "react";
+import Link from "next/link";
 import {
   BIENFAITS,
   CADRE,
@@ -9,7 +7,6 @@ import {
   REFLEXO_CONTRE_INDICATIONS,
   REFLEXO_FONCTIONNEMENT,
   REFLEXO_INTRO,
-  REFLEXO_QUIZ,
   SYSTEMES,
 } from "@/lib/content";
 
@@ -38,42 +35,7 @@ function Item({
   );
 }
 
-function QuizItem({
-  affirmation,
-  match,
-}: {
-  affirmation: string;
-  match: boolean;
-}) {
-  const [clicked, setClicked] = useState(false);
-
-  return (
-    <button
-      onClick={() => setClicked(true)}
-      className={`group flex w-full items-center gap-3 rounded-xl border px-4 py-3 text-left text-sm font-medium transition-all duration-300 ${
-        clicked
-          ? match
-            ? "border-emerald-accent/40 bg-emerald-accent/10 text-peacock-800"
-            : "border-red-200 bg-red-50 text-red-700"
-          : "border-peacock-100 bg-white/70 text-ink hover:border-peacock-300 hover:bg-peacock-50"
-      }`}
-    >
-      <span className="text-xl leading-none">
-        {clicked ? (match ? "🎉" : "☹️") : "○"}
-      </span>
-      <span className="flex-1">{affirmation}</span>
-      {clicked && (
-        <span className="shrink-0 text-xs font-semibold">
-          {match ? "La réflexologie peut vous aider !" : "Pas d'inquiétude 😊"}
-        </span>
-      )}
-    </button>
-  );
-}
-
 export default function Reflexologie() {
-  const [quizOpen, setQuizOpen] = useState(false);
-
   return (
     <section
       id="reflexologie"
@@ -182,34 +144,24 @@ export default function Reflexologie() {
           </div>
         </Item>
 
-        {/* 8 — Quiz */}
-        <div className="glass-card rounded-2xl px-6 py-1 shadow-soft">
-          <button
-            onClick={() => setQuizOpen((v) => !v)}
-            className="flex w-full items-center justify-between gap-4 py-4 text-left text-lg font-semibold text-peacock-800"
-          >
-            La réflexologie me correspond-elle ?
-            <span
-              className={`acc-icon flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-peacock-gradient text-lg text-white transition-transform duration-300 ${quizOpen ? "rotate-45" : ""}`}
-            >
-              +
+        {/* Quiz — page dédiée pour ne pas surcharger la section */}
+        <Link
+          href="/quiz"
+          className="glass-card group flex items-center justify-between gap-4 rounded-2xl px-6 py-5 shadow-soft transition-transform hover:scale-[1.01]"
+        >
+          <span className="text-left">
+            <span className="block text-lg font-semibold text-peacock-800">
+              La réflexologie est une approche qui me correspond ?
             </span>
-          </button>
-
-          {quizOpen && (
-            <div className="pb-6">
-              <p className="mb-4 text-sm text-ink-soft">
-                Cliquez sur les affirmations qui vous concernent pour savoir si
-                la réflexologie pourrait vous aider ✨
-              </p>
-              <div className="space-y-2">
-                {REFLEXO_QUIZ.map((q, i) => (
-                  <QuizItem key={i} affirmation={q.affirmation} match={q.match} />
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
+            <span className="mt-1 block text-sm text-ink-soft">
+              Faites le quiz pour savoir si elle pourrait soulager vos
+              symptômes ✨
+            </span>
+          </span>
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-peacock-gradient text-lg text-white transition-transform duration-300 group-hover:translate-x-1">
+            →
+          </span>
+        </Link>
       </div>
     </section>
   );

@@ -14,7 +14,7 @@ export default function Testimonials() {
   return (
     <section
       id="avis"
-      className="bg-peacock-gradient relative overflow-hidden px-5 py-20 text-white sm:py-28"
+      className="bg-peacock-gradient relative scroll-mt-24 overflow-hidden px-5 py-20 text-white sm:py-28"
     >
       <Sparkles />
 

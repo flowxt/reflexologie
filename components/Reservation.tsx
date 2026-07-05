@@ -66,7 +66,8 @@ export default function Reservation() {
 
         {/* Annulation en rouge, bien visible */}
         <p className="mt-6 rounded-2xl border border-red-200 bg-red-50 px-5 py-3 text-center text-sm font-semibold text-red-600">
-          🚨 Toute annulation est à signaler au moins 48h à l&apos;avance.
+          🚨 Toute annulation doit être signalée au moins 48h à l&apos;avance ;
+          passé ce délai, la séance reste due.
         </p>
 
         {/* Embed cal.com */}

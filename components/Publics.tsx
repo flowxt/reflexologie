@@ -17,6 +17,18 @@ const OFFSETS = [
   "sm:-translate-y-4",
 ];
 
+// Diamètre de la bulle adapté à la longueur du libellé, pour garder
+// une vraie forme ronde plutôt qu'une pilule/tag.
+function bubbleSize(label: string) {
+  if (label.length > 20) {
+    return "h-32 w-32 text-[11px] sm:h-36 sm:w-36 sm:text-xs";
+  }
+  if (label.length > 11) {
+    return "h-28 w-28 text-xs sm:h-32 sm:w-32 sm:text-sm";
+  }
+  return "h-24 w-24 text-sm sm:h-28 sm:w-28 sm:text-base";
+}
+
 export default function Publics() {
   const [activeId, setActiveId] = useState<string | null>(null);
   const active = PUBLICS.find((p) => p.id === activeId) ?? null;
@@ -38,12 +50,12 @@ export default function Publics() {
         </p>
       </div>
 
-      <div className="mt-12 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+      <div className="mt-12 flex flex-wrap items-center justify-center gap-5 sm:gap-6">
         {PUBLICS.map((p, i) => (
           <button
             key={p.id}
             onClick={() => setActiveId(p.id)}
-            className={`animate-bubble hover-peacock glass-card rounded-full px-5 py-3 text-sm font-semibold text-peacock-700 shadow-bubble sm:text-base ${OFFSETS[i % OFFSETS.length]}`}
+            className={`animate-bubble glass-bubble hover-peacock flex shrink-0 items-center justify-center rounded-full p-3 text-center font-semibold leading-tight text-peacock-800 ${bubbleSize(p.label)} ${OFFSETS[i % OFFSETS.length]}`}
             style={{ animationDelay: `${(i % 5) * 0.45}s` }}
           >
             {p.label}

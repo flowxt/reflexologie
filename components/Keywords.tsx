@@ -11,8 +11,22 @@ export default function Keywords() {
   const active = KEYWORDS.find((k) => k.id === activeId) ?? null;
 
   return (
-    <section className="bg-peacock-gradient relative overflow-hidden px-5 py-20 text-white sm:py-28">
+    <section
+      id="specialite"
+      className="bg-peacock-gradient relative scroll-mt-24 overflow-hidden px-5 py-20 text-white sm:py-28"
+    >
       <Sparkles />
+
+      {/* Séparateur lumineux à la jonction avec « Un brin de magie » */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex justify-center px-6 pt-8 sm:pt-10">
+        <div className="relative flex w-full max-w-3xl items-center justify-center">
+          <span className="absolute inset-x-0 h-[3px] rounded-full bg-linear-to-r from-transparent via-white/80 to-transparent shadow-[0_0_18px_rgba(255,255,255,0.55)]" />
+          <span className="relative flex h-10 w-10 items-center justify-center rounded-full bg-white text-lg text-peacock-600 shadow-[0_0_22px_rgba(255,255,255,0.75)]">
+            ✦
+          </span>
+        </div>
+      </div>
+
       <div className="relative z-10 mx-auto max-w-5xl">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-peacock-100">
@@ -22,8 +36,8 @@ export default function Keywords() {
             Stress, anxiété &amp; angoisses
           </h2>
           <p className="mt-4 text-peacock-50/90">
-            Trois mots au cœur de mon accompagnement. Cliquez pour comprendre
-            comment la réflexologie peut vous aider.
+            J&apos;accompagne les conséquences physiques et émotionnelles du
+            stress, de l&apos;anxiété et de l&apos;angoisse.
           </p>
         </div>
 

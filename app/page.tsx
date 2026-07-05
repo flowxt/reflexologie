@@ -12,8 +12,8 @@ export default function Home() {
     <>
       <Hero />
       <Presentation />
-      <Keywords />
       <FairySection />
+      <Keywords />
       <Reflexologie />
       <Publics />
       <Cabinet />

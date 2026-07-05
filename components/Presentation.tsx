@@ -8,6 +8,7 @@ import { PARCOURS } from "@/lib/content";
 
 export default function Presentation() {
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [hovered, setHovered] = useState<number | null>(null);
   const active = PARCOURS.find((b) => b.id === activeId) ?? null;
   const n = PARCOURS.length;
 
@@ -20,6 +21,14 @@ export default function Presentation() {
       y: 50 + 36 * Math.sin(angle),
     };
   });
+
+  // Position de repos de la fée (coin haut-droit) et position lorsqu'elle
+  // s'approche, en douceur, de la bulle survolée.
+  const fairyRest = { x: 80, y: 12 };
+  const fairyTarget =
+    hovered !== null
+      ? { x: positions[hovered].x, y: Math.max(8, positions[hovered].y - 13) }
+      : fairyRest;
 
   return (
     <section
@@ -72,17 +81,22 @@ export default function Presentation() {
           </div>
         </div>
 
-        {/* petite fée veillant sur la photo */}
-        <span className="animate-float-slow pointer-events-none absolute right-[12%] top-[6%] z-20 block w-[15%] min-w-[48px] drop-shadow-[0_6px_14px_rgba(12,100,112,0.3)]">
-          <Image
-            src="/element/fee2-clean.png"
-            alt=""
-            width={90}
-            height={78}
-            aria-hidden="true"
-            className="h-auto w-full"
-          />
-        </span>
+        {/* petite fée qui s'approche en douceur de la bulle survolée */}
+        <div
+          className="pointer-events-none absolute z-20 w-[15%] min-w-[48px] -translate-x-1/2 -translate-y-1/2 transition-all duration-1400 ease-out"
+          style={{ left: `${fairyTarget.x}%`, top: `${fairyTarget.y}%` }}
+        >
+          <span className="animate-float-slow block drop-shadow-[0_6px_14px_rgba(12,100,112,0.3)]">
+            <Image
+              src="/element/fee2-clean.png"
+              alt=""
+              width={90}
+              height={78}
+              aria-hidden="true"
+              className="h-auto w-full"
+            />
+          </span>
+        </div>
 
         {PARCOURS.map((b, i) => (
           <div
@@ -92,7 +106,11 @@ export default function Presentation() {
           >
             <button
               onClick={() => setActiveId(b.id)}
-              className="animate-bubble hover-peacock glass-card relative flex h-full w-full items-center justify-center rounded-full p-2 text-center text-xs font-semibold leading-tight text-peacock-700 shadow-bubble sm:text-sm"
+              onMouseEnter={() => setHovered(i)}
+              onMouseLeave={() => setHovered(null)}
+              onFocus={() => setHovered(i)}
+              onBlur={() => setHovered(null)}
+              className="animate-bubble hover-peacock glass-bubble relative flex h-full w-full items-center justify-center rounded-full p-2 text-center text-xs font-semibold leading-tight text-peacock-800 sm:text-sm"
               style={{ animationDelay: `${i * 0.5}s` }}
             >
               <span className="absolute -top-2 left-1/2 flex h-6 w-6 -translate-x-1/2 items-center justify-center rounded-full bg-peacock-gradient text-xs font-bold text-white shadow-bubble ring-2 ring-white sm:h-7 sm:w-7">
@@ -114,13 +132,13 @@ export default function Presentation() {
         <p className="max-w-xl text-center text-ink-soft">
           Spécialisée en{" "}
           <strong className="font-semibold text-peacock-700">
-            neuro-réflexologie
+            neuro-réflexologie ®
           </strong>
-          ,{" "}
+          , en{" "}
           <strong className="font-semibold text-peacock-700">
             néo-réflexologie
           </strong>{" "}
-          et suivi d&apos;
+          et en suivi d&apos;
           <strong className="font-semibold text-peacock-700">
             endométriose
           </strong>

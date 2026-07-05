@@ -85,24 +85,15 @@ export default function FairySection() {
 
   return (
     <section
+      id="magie"
       onMouseEnter={() => enabled && setInside(true)}
       onMouseLeave={() => setInside(false)}
       onMouseMove={enabled ? onMove : undefined}
-      className={`bg-peacock-gradient relative overflow-hidden px-5 py-24 text-white ${
+      className={`bg-peacock-gradient relative scroll-mt-24 overflow-hidden px-5 py-24 text-white ${
         inside ? "cursor-none" : ""
       }`}
     >
       <Sparkles />
-
-      {/* Séparateur lumineux à la jonction avec « Ma spécialité » */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex justify-center px-6 pt-8 sm:pt-10">
-        <div className="relative flex w-full max-w-3xl items-center justify-center">
-          <span className="absolute inset-x-0 h-[3px] rounded-full bg-linear-to-r from-transparent via-white/80 to-transparent shadow-[0_0_18px_rgba(255,255,255,0.55)]" />
-          <span className="relative flex h-10 w-10 items-center justify-center rounded-full bg-white text-lg text-peacock-600 shadow-[0_0_22px_rgba(255,255,255,0.75)]">
-            ✦
-          </span>
-        </div>
-      </div>
 
       {/* couche de poussière de fée */}
       <div
@@ -150,7 +141,7 @@ export default function FairySection() {
           </span>
         </button>
 
-        <p className="heading-script mt-8 max-w-xl text-2xl text-peacock-50">
+        <p className="heading-script mt-8 max-w-xl text-3xl text-peacock-50 sm:text-4xl">
           {FAIRY.signature}
         </p>
         {enabled && (
