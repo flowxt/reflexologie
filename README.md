@@ -30,9 +30,11 @@ Tout le texte éditorial est centralisé dans **`lib/content.ts`** :
 
 ## À configurer avant la mise en ligne
 
-1. **cal.com** : remplacer `SITE.calLink` dans `lib/content.ts` par l'identifiant
-   réel de la cliente (ex. `delphine-eminet/reflexologie-plantaire`). On peut créer
-   un type d'événement par cabinet (Saint-Jorioz / Annecy mardi PM).
+1. **cal.com** : les identifiants sont déjà configurés dans `lib/content.ts`
+   (`SITE.calLinkPlantaireDecouverte`, `SITE.calLinkPlantaireUnite`,
+   `SITE.calLinkPalmaireDecouverte`, `SITE.calLinkPalmaireUnite`), pointant vers
+   les liens cal.eu de la cliente. Si de nouveaux types d'événements sont créés,
+   mettre à jour ces champs.
 2. **Photo** : remplacer `public/element/delphine.jpg` par la vraie photo (même nom).
 3. **E-mail / téléphone** : renseigner `SITE.email` (et `SITE.phone`).
 4. **Fées** : les visuels sont détourés automatiquement (fond rendu transparent)

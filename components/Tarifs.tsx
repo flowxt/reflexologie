@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { TARIFS, type TarifLigne } from "@/lib/content";
+import { SITE, TARIFS, type TarifLigne } from "@/lib/content";
 import ReserveButton from "./ReserveButton";
 
 function LigneRow({ l }: { l: TarifLigne }) {
@@ -28,6 +28,12 @@ export default function Tarifs() {
     tab === "plantaire"
       ? TARIFS.casParticuliers.plantaire
       : TARIFS.casParticuliers.palmaire;
+  const calLinkDecouverte =
+    tab === "plantaire"
+      ? SITE.calLinkPlantaireDecouverte
+      : SITE.calLinkPalmaireDecouverte;
+  const calLinkUnite =
+    tab === "plantaire" ? SITE.calLinkPlantaireUnite : SITE.calLinkPalmaireUnite;
 
   return (
     <section
@@ -89,6 +95,7 @@ export default function Tarifs() {
           <ReserveButton
             label="Réserver cette séance"
             variant="light"
+            calLink={calLinkDecouverte}
             className="mt-6 w-full"
           />
         </div>
@@ -104,8 +111,11 @@ export default function Tarifs() {
             ))}
           </div>
           <div className="mt-auto flex flex-wrap justify-center gap-3 pt-6">
-            <ReserveButton label="Réserver la séance" />
-            <ReserveButton label="Réserver la séance + l'option" />
+            <ReserveButton label="Réserver la séance" calLink={calLinkUnite} />
+            <ReserveButton
+              label="Réserver la séance + l'option"
+              calLink={calLinkUnite}
+            />
           </div>
         </div>
 
@@ -125,9 +135,6 @@ export default function Tarifs() {
               <LigneRow key={i} l={l} />
             ))}
           </div>
-          <div className="mt-6 flex justify-center">
-            <ReserveButton label="Réserver un forfait" />
-          </div>
         </div>
 
         {/* cas particuliers */}
@@ -144,7 +151,7 @@ export default function Tarifs() {
             {TARIFS.casParticuliers.note}
           </p>
           <div className="mt-6 flex justify-center">
-            <ReserveButton label="Réserver ce suivi" />
+            <ReserveButton label="Réserver ce suivi" calLink={calLinkUnite} />
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@ import Reflexologie from "@/components/Reflexologie";
 import Publics from "@/components/Publics";
 import Cabinet from "@/components/Cabinet";
 import FairySection from "@/components/FairySection";
+import SectionDivider from "@/components/SectionDivider";
 import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
@@ -13,9 +14,10 @@ export default function Home() {
       <Hero />
       <Presentation />
       <FairySection />
-      <Keywords />
       <Reflexologie />
+      <Keywords />
       <Publics />
+      <SectionDivider />
       <Cabinet />
       <Testimonials />
     </>

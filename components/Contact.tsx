@@ -3,23 +3,48 @@
 import { useState } from "react";
 import { CABINETS, SITE } from "@/lib/content";
 
-export default function Contact() {
-  const [sent, setSent] = useState(false);
+type Status = "idle" | "sending" | "sent" | "error";
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+export default function Contact() {
+  const [status, setStatus] = useState<Status>("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
-    const nom = String(data.get("nom") ?? "");
-    const email = String(data.get("email") ?? "");
-    const message = String(data.get("message") ?? "");
-    const body = `Nom : ${nom}%0AEmail : ${email}%0A%0A${encodeURIComponent(
-      message,
-    )}`;
-    window.location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(
-      "Demande via le site — " + nom,
-    )}&body=${body}`;
-    setSent(true);
+    const payload = {
+      nom: String(data.get("nom") ?? ""),
+      email: String(data.get("email") ?? ""),
+      telephone: String(data.get("telephone") ?? ""),
+      message: String(data.get("message") ?? ""),
+    };
+
+    setStatus("sending");
+    setErrorMessage("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        const body = await res.json().catch(() => null);
+        throw new Error(body?.error || "L'envoi a échoué.");
+      }
+
+      setStatus("sent");
+      form.reset();
+    } catch (err) {
+      setStatus("error");
+      setErrorMessage(
+        err instanceof Error
+          ? err.message
+          : "Une erreur est survenue, merci de réessayer.",
+      );
+    }
   }
 
   return (
@@ -127,6 +152,24 @@ export default function Contact() {
             </div>
             <div>
               <label
+                htmlFor="telephone"
+                className="mb-1 block text-sm font-medium text-ink-soft"
+              >
+                Votre téléphone{" "}
+                <span className="font-normal text-ink-soft/60">
+                  (optionnel)
+                </span>
+              </label>
+              <input
+                id="telephone"
+                name="telephone"
+                type="tel"
+                autoComplete="tel"
+                className="w-full rounded-xl border border-peacock-100 bg-white/80 px-4 py-3 text-ink outline-none transition-colors focus:border-peacock-400"
+              />
+            </div>
+            <div>
+              <label
                 htmlFor="message"
                 className="mb-1 block text-sm font-medium text-ink-soft"
               >
@@ -142,14 +185,29 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="w-full rounded-full bg-peacock-gradient px-6 py-3.5 font-semibold text-white shadow-bubble transition-transform hover:scale-[1.02]"
+              disabled={status === "sending"}
+              className="w-full rounded-full bg-peacock-gradient px-6 py-3.5 font-semibold text-white shadow-bubble transition-transform hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:scale-100"
             >
-              Envoyer
+              {status === "sending" ? "Envoi en cours…" : "Envoyer"}
             </button>
-            {sent && (
+            {status === "sent" && (
               <p className="text-center text-sm text-emerald-accent">
-                Votre logiciel de messagerie va s&apos;ouvrir pour finaliser
-                l&apos;envoi. Merci !
+                Votre message a bien été envoyé. Merci, je vous réponds au
+                plus vite !
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-center text-sm text-red-600">
+                {errorMessage ||
+                  "Une erreur est survenue, merci de réessayer."}{" "}
+                Vous pouvez aussi m&apos;écrire directement à{" "}
+                <a
+                  href={`mailto:${SITE.email}`}
+                  className="font-semibold underline-offset-2 hover:underline"
+                >
+                  {SITE.email}
+                </a>
+                .
               </p>
             )}
           </form>

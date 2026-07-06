@@ -7,8 +7,8 @@ import { useState } from "react";
 const SECTION_LINKS = [
   { href: "/#parcours", label: "Qui suis-je" },
   { href: "/#magie", label: "Un brin de magie" },
-  { href: "/#specialite", label: "Ma spécialité" },
   { href: "/#reflexologie", label: "Comprendre" },
+  { href: "/#specialite", label: "Ma spécialité" },
   { href: "/#publics", label: "Pour qui" },
   { href: "/#cabinet", label: "Les cabinets" },
   { href: "/#avis", label: "Témoignages" },

@@ -17,7 +17,7 @@ export default function Keywords() {
     >
       <Sparkles />
 
-      {/* Séparateur lumineux à la jonction avec « Un brin de magie » */}
+      {/* Séparateur lumineux à la jonction avec « Comprendre » */}
       <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex justify-center px-6 pt-8 sm:pt-10">
         <div className="relative flex w-full max-w-3xl items-center justify-center">
           <span className="absolute inset-x-0 h-[3px] rounded-full bg-linear-to-r from-transparent via-white/80 to-transparent shadow-[0_0_18px_rgba(255,255,255,0.55)]" />

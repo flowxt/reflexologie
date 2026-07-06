@@ -36,7 +36,7 @@ export default function Publics() {
   return (
     <section
       id="publics"
-      className="relative mx-auto max-w-5xl scroll-mt-24 px-5 py-20 sm:py-28"
+      className="relative mx-auto max-w-5xl scroll-mt-24 px-5 pb-10 pt-20 sm:pb-14 sm:pt-28"
     >
       <div className="mx-auto max-w-2xl text-center">
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-peacock-500">

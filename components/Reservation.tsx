@@ -26,7 +26,7 @@ export default function Reservation() {
   return (
     <section
       id="reservation"
-      className="relative scroll-mt-24 bg-gradient-to-b from-white to-peacock-50 px-5 py-20 sm:py-28"
+      className="relative scroll-mt-24 bg-linear-to-b from-white to-peacock-50 px-5 py-20 sm:py-28"
     >
       <div className="mx-auto max-w-5xl">
         <div className="mx-auto max-w-2xl text-center">
@@ -75,7 +75,8 @@ export default function Reservation() {
           {show ? (
             <div className="h-[640px] w-full overflow-auto rounded-2xl">
               <Cal
-                calLink={SITE.calLink}
+                calLink={SITE.calLinkPlantaireDecouverte}
+                calOrigin={SITE.calOrigin}
                 style={{ width: "100%", height: "100%" }}
                 config={{ layout: "month_view" }}
               />

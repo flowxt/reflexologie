@@ -13,7 +13,7 @@ type Props = {
 
 export default function ReserveButton({
   label = "Réserver",
-  calLink = SITE.calLink,
+  calLink = SITE.calLinkPlantaireDecouverte,
   variant = "solid",
   className = "",
 }: Props) {
@@ -42,6 +42,7 @@ export default function ReserveButton({
     <button
       type="button"
       data-cal-link={calLink}
+      data-cal-origin={SITE.calOrigin}
       data-cal-config='{"layout":"month_view"}'
       className={`inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold shadow-bubble transition-transform hover:scale-105 ${variants[variant]} ${className}`}
     >

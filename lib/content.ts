@@ -4,8 +4,17 @@ export const SITE = {
   name: "Delphine Eminet",
   role: "Réflexologue",
   baseline: "Du bien-être… mais pas que… Du mieux-être ✨",
-  // Lien cal.com (à remplacer par le vrai identifiant de la cliente).
-  calLink: "delphine-eminet",
+  // Réservation en ligne via Cal.com (instance européenne : cal.eu).
+  // L'iframe d'intégration doit pointer vers "app.cal.eu" (et non "cal.eu",
+  // qui est le domaine public des liens de réservation).
+  calOrigin: "https://app.cal.eu",
+  // Réflexologie plantaire
+  calLinkPlantaireDecouverte: "reflexologie-delphine-eminet/faisons-connaissance",
+  calLinkPlantaireUnite: "reflexologie-delphine-eminet/seance-a-l-unite",
+  // Réflexologie palmaire
+  calLinkPalmaireDecouverte:
+    "reflexologie-delphine-eminet/faisons-connaissance-palmaire",
+  calLinkPalmaireUnite: "reflexologie-delphine-eminet/seance-a-l-unite-palmaire",
   email: "d.eminet@hotmail.fr",
   phone: "06 73 40 85 45",
   // Numéro au format international (sans le 0, sans espaces) pour WhatsApp.
@@ -85,7 +94,7 @@ export const CABINETS = [
   {
     ville: "Saint-Jorioz",
     detail: "Sur rendez-vous",
-    horaires: "Lundi, mercredi, samedi & dimanche",
+    horaires: "Lundi, mercredi, jeudi, vendredi, samedi & dimanche",
   },
   {
     ville: "À votre domicile",
@@ -515,7 +524,8 @@ export const CABINET = {
     {
       id: "cabinet-saint-jorioz",
       ville: "Saint-Jorioz",
-      sousTitre: "Le cabinet principal — lundi, mercredi, vendredi & week-end",
+      sousTitre:
+        "Le cabinet principal — lundi, mercredi, jeudi, vendredi & week-end",
       description: [
         "À Saint-Jorioz, je vous reçois dans un espace calme et chaleureux : lumière douce, musique, table de massage confortable ou fauteuil adapté.",
         "Un coin de jeux accueille les enfants, et tout est pensé pour les tout-petits comme pour les plus grands. Vous êtes ici dans une bulle, le temps d'une parenthèse pour vous.",

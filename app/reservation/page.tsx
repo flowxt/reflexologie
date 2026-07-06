@@ -4,7 +4,7 @@ import Tarifs from "@/components/Tarifs";
 import Reservation from "@/components/Reservation";
 
 export const metadata: Metadata = {
-  title: "Tarifs & Réservation — Delphine Eminet, réflexologue",
+  title: "Tarifs & Réservation",
   description:
     "Tarifs, formules et abonnements de réflexologie plantaire et palmaire. Réservez votre séance en ligne à Saint-Jorioz ou Annecy.",
 };

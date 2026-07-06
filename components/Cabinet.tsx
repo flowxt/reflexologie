@@ -136,7 +136,7 @@ export default function Cabinet() {
   return (
     <section
       id="cabinet"
-      className="bg-linear-to-b from-white to-peacock-50 scroll-mt-24 px-5 py-20 sm:py-28"
+      className="bg-linear-to-b from-white to-peacock-50 scroll-mt-24 px-5 pb-20 pt-10 sm:pb-28 sm:pt-14"
     >
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">

@@ -3,7 +3,7 @@ import PageBanner from "@/components/PageBanner";
 import Contact from "@/components/Contact";
 
 export const metadata: Metadata = {
-  title: "Contact — Delphine Eminet, réflexologue",
+  title: "Contact",
   description:
     "Contactez Delphine Eminet, réflexologue à Saint-Jorioz et Annecy. Questions, demandes particulières et devis personnalisés.",
 };
