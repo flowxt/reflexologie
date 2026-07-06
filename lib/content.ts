@@ -11,10 +11,15 @@ export const SITE = {
   // Réflexologie plantaire
   calLinkPlantaireDecouverte: "reflexologie-delphine-eminet/faisons-connaissance",
   calLinkPlantaireUnite: "reflexologie-delphine-eminet/seance-a-l-unite",
+  // Séance à l'unité + option temps supplémentaire de massage
+  calLinkPlantaireUniteOption:
+    "reflexologie-delphine-eminet/seance-a-l-unite-tps-supp",
   // Réflexologie palmaire
   calLinkPalmaireDecouverte:
     "reflexologie-delphine-eminet/faisons-connaissance-palmaire",
   calLinkPalmaireUnite: "reflexologie-delphine-eminet/seance-a-l-unite-palmaire",
+  calLinkPalmaireUniteOption:
+    "reflexologie-delphine-eminet/seance-a-l-unite-palmaire-tps-supp",
   email: "d.eminet@hotmail.fr",
   phone: "06 73 40 85 45",
   // Numéro au format international (sans le 0, sans espaces) pour WhatsApp.

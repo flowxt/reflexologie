@@ -34,6 +34,10 @@ export default function Tarifs() {
       : SITE.calLinkPalmaireDecouverte;
   const calLinkUnite =
     tab === "plantaire" ? SITE.calLinkPlantaireUnite : SITE.calLinkPalmaireUnite;
+  const calLinkUniteOption =
+    tab === "plantaire"
+      ? SITE.calLinkPlantaireUniteOption
+      : SITE.calLinkPalmaireUniteOption;
 
   return (
     <section
@@ -114,7 +118,7 @@ export default function Tarifs() {
             <ReserveButton label="Réserver la séance" calLink={calLinkUnite} />
             <ReserveButton
               label="Réserver la séance + l'option"
-              calLink={calLinkUnite}
+              calLink={calLinkUniteOption}
             />
           </div>
         </div>
