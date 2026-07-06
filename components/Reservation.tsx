@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { CABINETS, SITE } from "@/lib/content";
 
@@ -43,25 +44,46 @@ export default function Reservation() {
 
         {/* Cabinets — grille 3 colonnes sur grand écran */}
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {CABINETS.map((c) => (
-            <div
-              key={c.ville}
-              className="glass-card flex items-start gap-4 rounded-3xl p-6 shadow-soft"
-            >
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-peacock-gradient text-xl text-white">
-                📍
-              </span>
-              <div>
-                <h3 className="text-lg font-bold text-peacock-800">
-                  {c.ville}
-                </h3>
-                <p className="text-sm text-ink-soft">{c.detail}</p>
-                <p className="mt-1 text-sm font-medium text-emerald-accent">
-                  {c.horaires}
-                </p>
+          {CABINETS.map((c) => {
+            const content = (
+              <>
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-peacock-gradient text-xl text-white">
+                  📍
+                </span>
+                <div>
+                  <h3 className="text-lg font-bold text-peacock-800">
+                    {c.ville}
+                  </h3>
+                  <p className="text-sm text-ink-soft">{c.detail}</p>
+                  <p className="mt-1 text-sm font-medium text-emerald-accent">
+                    {c.horaires}
+                  </p>
+                  {c.contactRequired && (
+                    <p className="mt-2 text-sm font-semibold text-peacock-700">
+                      Écrivez-moi via le formulaire de contact →
+                    </p>
+                  )}
+                </div>
+              </>
+            );
+
+            return c.contactRequired ? (
+              <Link
+                key={c.ville}
+                href="/contact"
+                className="glass-card flex items-start gap-4 rounded-3xl p-6 shadow-soft transition-transform hover:scale-[1.02]"
+              >
+                {content}
+              </Link>
+            ) : (
+              <div
+                key={c.ville}
+                className="glass-card flex items-start gap-4 rounded-3xl p-6 shadow-soft"
+              >
+                {content}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Annulation en rouge, bien visible */}

@@ -35,6 +35,15 @@ export default function LocationPins() {
         onClose={() => setShowHome(false)}
         eyebrow="À domicile"
         title="Je me déplace chez vous"
+        footer={
+          <Link
+            href="/contact"
+            onClick={() => setShowHome(false)}
+            className="inline-flex rounded-full bg-peacock-gradient px-6 py-3 text-sm font-semibold text-white shadow-bubble transition-transform hover:scale-105"
+          >
+            Me contacter pour convenir d&apos;un rendez-vous
+          </Link>
+        }
       >
         <p>
           Je me déplace à votre domicile dans un périmètre de 10 km autour
@@ -47,6 +56,11 @@ export default function LocationPins() {
         </p>
         <p className="text-sm font-semibold text-peacock-700">
           * Forfait déplacement aller-retour : tarif unique de 5 €.
+        </p>
+        <p className="rounded-xl bg-peacock-50 p-3 text-sm text-ink-soft">
+          Ces séances ne se réservent pas directement en ligne : contactez-moi
+          via la fiche contact pour que l&apos;on convienne ensemble d&apos;un
+          créneau.
         </p>
       </Modal>
     </>

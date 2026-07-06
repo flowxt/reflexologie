@@ -103,8 +103,9 @@ export const CABINETS = [
   },
   {
     ville: "À votre domicile",
-    detail: "Déplacement possible — forfait A/R 5 €",
-    horaires: "Tous les jours, week-end compris, sur rendez-vous",
+    detail: "Sur demande, via la fiche contact — forfait A/R 5 €",
+    horaires: "On convient ensemble d'un créneau",
+    contactRequired: true,
   },
 ];
 
@@ -1143,7 +1144,7 @@ export const TARIFS = {
   infos: [
     "La 1ʳᵉ séance « Faisons connaissance » se réserve à l'unité : elle ne fait pas partie des abonnements.",
     "Les abonnements se règlent en une fois, au démarrage des séances.",
-    "Séances à domicile : forfait déplacement aller-retour au tarif unique de 5 € (périmètre de 10 km autour d'Annecy).",
+    "Séances à domicile : uniquement sur demande via la fiche contact (pas de réservation en ligne) — forfait déplacement aller-retour au tarif unique de 5 € (périmètre de 10 km autour d'Annecy).",
     "Rapprochez-vous de votre mutuelle : la réflexologie est parfois prise en charge. Une facture vous est délivrée comme justificatif.",
     "Devis personnalisé pour toute demande particulière.",
     "Règlements acceptés : carte bancaire (CB), chèques & espèces.",

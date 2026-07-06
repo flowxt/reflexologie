@@ -76,9 +76,21 @@ export default function Footer() {
             <ul className="mt-4 space-y-4 text-sm">
               {CABINETS.map((c) => (
                 <li key={c.ville}>
-                  <p className="font-semibold text-white">{c.ville}</p>
-                  <p className="text-peacock-200">{c.detail}</p>
-                  <p className="text-peacock-300">{c.horaires}</p>
+                  {c.contactRequired ? (
+                    <Link href="/contact" className="group block">
+                      <p className="font-semibold text-white group-hover:underline">
+                        {c.ville}
+                      </p>
+                      <p className="text-peacock-200">{c.detail}</p>
+                      <p className="text-peacock-300">{c.horaires}</p>
+                    </Link>
+                  ) : (
+                    <>
+                      <p className="font-semibold text-white">{c.ville}</p>
+                      <p className="text-peacock-200">{c.detail}</p>
+                      <p className="text-peacock-300">{c.horaires}</p>
+                    </>
+                  )}
                 </li>
               ))}
             </ul>
