@@ -198,7 +198,7 @@ export const PARCOURS: Bubble[] = [
     body: [
       "J'avance sur les chemins surprenants de la vie.",
       "Et tout à coup, l'ÉVIDENCE : la réflexologie revient dans ma vie… le boomerang que je décide d'attraper au vol et de ne plus lâcher.",
-      "Je me forme chez Serenity Formation, en neuro-réflexologie ® (Nadine Jedrey et Sergio Mesa).",
+      "Je me forme à Réflexologie-Annecy, auprès de Nadine Jedrey et Sergio Mesa, à la méthode de neuro-réflexologie ®.",
       "La réflexologie, comme la RÉSULTANTE de toutes mes vies professionnelles. Du SOIN au PRENDRE SOIN, étage BIEN-ÊTRE.",
       "La réflexologie coche toutes MES cases :",
       "✅ Prise en charge holistique de tous les êtres humains",
