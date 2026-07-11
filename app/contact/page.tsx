@@ -6,6 +6,18 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Contactez Delphine Eminet, réflexologue à Saint-Jorioz et Annecy. Questions, demandes particulières et devis personnalisés.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact — Delphine Eminet, réflexologue",
+    description:
+      "Contactez Delphine Eminet, réflexologue à Saint-Jorioz et Annecy.",
+    url: "/contact",
+    siteName: "Delphine Eminet — Réflexologue",
+    type: "website",
+    locale: "fr_FR",
+  },
 };
 
 export default function ContactPage() {
