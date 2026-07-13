@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { CABINETS, SITE } from "@/lib/content";
+import ReserveButton from "./ReserveButton";
 
 export default function Reservation() {
   const [show, setShow] = useState(false);
@@ -84,6 +85,32 @@ export default function Reservation() {
               </div>
             );
           })}
+        </div>
+
+        {/* Carte cadeau */}
+        <div className="mt-6 flex flex-col items-center gap-4 rounded-3xl border border-amber-200 bg-linear-to-br from-amber-50 via-white to-peacock-50 p-6 text-center shadow-soft sm:flex-row sm:justify-between sm:text-left">
+          <div>
+            <h3 className="text-lg font-bold text-peacock-800">
+              🎁 Une carte cadeau ?
+            </h3>
+            <p className="mt-1 text-sm text-ink-soft">
+              Offrez une séance à un proche, ou réservez la vôtre si vous en
+              avez déjà reçu une.
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-amber-300 bg-white px-5 py-2.5 text-sm font-semibold text-amber-700 shadow-bubble transition-transform hover:scale-105"
+            >
+              <span aria-hidden>🎁</span>
+              Réserver un bon cadeau
+            </Link>
+            <ReserveButton
+              label="Réserver une séance suite à bon cadeau"
+              calLink={SITE.calLinkPlantaireUnite}
+            />
+          </div>
         </div>
 
         {/* Annulation en rouge, bien visible */}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { SITE, TARIFS, type TarifLigne } from "@/lib/content";
 import ReserveButton from "./ReserveButton";
 
@@ -138,6 +139,33 @@ export default function Tarifs() {
             {current.abonnements.map((l, i) => (
               <LigneRow key={i} l={l} />
             ))}
+          </div>
+        </div>
+
+        {/* carte cadeau */}
+        <div className="relative overflow-hidden rounded-3xl border border-amber-200 bg-linear-to-br from-amber-50 via-white to-peacock-50 p-8 shadow-soft lg:col-span-2">
+          <h3 className="text-xl font-bold text-peacock-800">
+            🎁 Carte cadeau
+          </h3>
+          <p className="mt-2 text-sm text-ink-soft/90">
+            Offrez un vrai moment de bien-être à un proche. Le bon cadeau est
+            valable sur une séance à l&apos;unité, au cabinet ou à
+            domicile. Vous en avez déjà reçu un ? Réservez votre séance
+            directement, en précisant votre bon lors de la prise de
+            rendez-vous.
+          </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-amber-300 bg-white px-6 py-3 text-sm font-semibold text-amber-700 shadow-bubble transition-transform hover:scale-105"
+            >
+              <span aria-hidden>🎁</span>
+              Réserver un bon cadeau
+            </Link>
+            <ReserveButton
+              label="Réserver une séance suite à bon cadeau"
+              calLink={calLinkUnite}
+            />
           </div>
         </div>
 
