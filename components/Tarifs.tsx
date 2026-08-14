@@ -143,7 +143,10 @@ export default function Tarifs() {
         </div>
 
         {/* carte cadeau */}
-        <div className="relative overflow-hidden rounded-3xl border border-amber-200 bg-linear-to-br from-amber-50 via-white to-peacock-50 p-8 shadow-soft lg:col-span-2">
+        <div
+          id="carte-cadeau"
+          className="relative scroll-mt-24 overflow-hidden rounded-3xl border border-amber-200 bg-linear-to-br from-amber-50 via-white to-peacock-50 p-8 shadow-soft lg:col-span-2"
+        >
           <h3 className="text-xl font-bold text-peacock-800">
             🎁 Carte cadeau
           </h3>
@@ -155,6 +158,14 @@ export default function Tarifs() {
             rendez-vous.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <a
+              href="/documents/bon-cadeau-reflexologie.pdf"
+              download
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-white shadow-bubble transition-transform hover:scale-105"
+            >
+              <span aria-hidden>⬇️</span>
+              Télécharger le bon cadeau
+            </a>
             <Link
               href="/contact"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-amber-300 bg-white px-6 py-3 text-sm font-semibold text-amber-700 shadow-bubble transition-transform hover:scale-105"

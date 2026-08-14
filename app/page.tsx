@@ -7,6 +7,7 @@ import Cabinet from "@/components/Cabinet";
 import FairySection from "@/components/FairySection";
 import SectionDivider from "@/components/SectionDivider";
 import Testimonials from "@/components/Testimonials";
+import GiftButton from "@/components/GiftButton";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <SectionDivider />
       <Cabinet />
       <Testimonials />
+      <GiftButton />
     </>
   );
 }

@@ -71,7 +71,7 @@ export default function Presentation() {
         <div className="absolute left-1/2 top-1/2 h-[40%] w-[40%] -translate-x-1/2 -translate-y-1/2">
           <div className="bg-peacock-gradient relative h-full w-full rounded-full p-[3px] shadow-bubble">
             <Image
-              src="/element/delphine.jpg"
+              src="/photo/delphine-new.jpeg"
               alt="Delphine Eminet, réflexologue"
               fill
               sizes="240px"
