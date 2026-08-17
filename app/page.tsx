@@ -8,6 +8,13 @@ import FairySection from "@/components/FairySection";
 import SectionDivider from "@/components/SectionDivider";
 import Testimonials from "@/components/Testimonials";
 import GiftButton from "@/components/GiftButton";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function Home() {
   return (

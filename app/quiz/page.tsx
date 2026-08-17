@@ -3,14 +3,14 @@ import PageBanner from "@/components/PageBanner";
 import Quiz from "@/components/Quiz";
 
 export const metadata: Metadata = {
-  title: "Le quiz — La réflexologie est-elle faite pour moi ?",
+  title: "Le quiz",
   description:
     "Répondez à ce quiz en cliquant sur les affirmations qui vous concernent pour savoir si la réflexologie pourrait soulager vos symptômes.",
   alternates: {
     canonical: "/quiz",
   },
   openGraph: {
-    title: "Le quiz — La réflexologie est-elle faite pour moi ?",
+    title: "Le quiz — Delphine Eminet, réflexologue",
     description:
       "Cliquez sur les affirmations qui vous concernent pour savoir si la réflexologie pourrait vous aider.",
     url: "/quiz",

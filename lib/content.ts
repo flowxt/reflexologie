@@ -3,6 +3,12 @@
 export const SITE = {
   name: "Delphine Eminet",
   role: "Réflexologue",
+  // Domaine canonique = celui qui répond réellement en 200.
+  // Vercel redirige aujourd'hui reflexologue-annecy.com → www.reflexologue-annecy.com
+  // (308). Les balises canonical / sitemap doivent donc utiliser le www,
+  // sinon Google voit une boucle (redirection vers www, canonical vers apex)
+  // et n'indexe en pratique que la page d'accueil.
+  url: "https://www.reflexologue-annecy.com",
   baseline: "Du bien-être… mais pas que… Du mieux-être ✨",
   // Réservation en ligne via Cal.com (instance européenne : cal.eu).
   // L'iframe d'intégration doit pointer vers "app.cal.eu" (et non "cal.eu",

@@ -18,10 +18,8 @@ const dancingScript = Dancing_Script({
   display: "swap",
 });
 
-const SITE_URL = "https://reflexologue-annecy.com";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL(SITE.url),
   title: {
     default: "Delphine Eminet — Réflexologie à Saint-Jorioz & Annecy",
     template: "%s — Delphine Eminet, réflexologue",
@@ -41,9 +39,6 @@ export const metadata: Metadata = {
     "haute-savoie",
   ],
   authors: [{ name: "Delphine Eminet" }],
-  alternates: {
-    canonical: "/",
-  },
   robots: {
     index: true,
     follow: true,
@@ -56,7 +51,7 @@ export const metadata: Metadata = {
     title: "Delphine Eminet — Réflexologie",
     description:
       "Réflexologie plantaire & palmaire à Saint-Jorioz et Annecy. Prendre soin, de 0 à 110 ans.",
-    url: SITE_URL,
+    url: SITE.url,
     siteName: "Delphine Eminet — Réflexologue",
     type: "website",
     locale: "fr_FR",
@@ -83,10 +78,10 @@ export default function RootLayout({
     name: "Delphine Eminet — Réflexologue",
     description:
       "Réflexologie plantaire & palmaire à Saint-Jorioz et Annecy, pour la gestion du stress, de l'anxiété et des angoisses.",
-    url: SITE_URL,
+    url: SITE.url,
     telephone: SITE.phone,
     email: SITE.email,
-    image: `${SITE_URL}/element/delphine.jpg`,
+    image: `${SITE.url}/photo/delphine-new.jpeg`,
     areaServed: ["Saint-Jorioz", "Annecy", "Haute-Savoie"],
     sameAs: [SITE.instagram, SITE.facebook],
   };

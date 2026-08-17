@@ -1,31 +1,30 @@
 import type { MetadataRoute } from "next";
-
-const SITE_URL = "https://reflexologue-annecy.com";
+import { SITE } from "@/lib/content";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
   return [
     {
-      url: SITE_URL,
+      url: SITE.url,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: `${SITE_URL}/reservation`,
+      url: `${SITE.url}/reservation`,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${SITE_URL}/quiz`,
+      url: `${SITE.url}/quiz`,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${SITE_URL}/contact`,
+      url: `${SITE.url}/contact`,
       lastModified: now,
       changeFrequency: "yearly",
       priority: 0.6,
