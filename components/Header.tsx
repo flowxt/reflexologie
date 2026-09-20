@@ -101,12 +101,20 @@ export default function Header() {
           </Link>
         </div>
 
-        <button
-          onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-full text-peacock-700 lg:hidden"
-          aria-label="Menu"
-          aria-expanded={open}
-        >
+        {/* Mobile / tablette : bouton Réserver toujours visible + burger */}
+        <div className="flex items-center gap-2 lg:hidden">
+          <Link
+            href="/reservation"
+            className="rounded-full bg-peacock-gradient px-4 py-2 text-sm font-semibold text-white shadow-bubble transition-transform hover:scale-105"
+          >
+            Réserver
+          </Link>
+          <button
+            onClick={() => setOpen((v) => !v)}
+            className="flex h-10 w-10 items-center justify-center rounded-full text-peacock-700"
+            aria-label="Menu"
+            aria-expanded={open}
+          >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             {open ? (
               <path
@@ -124,7 +132,8 @@ export default function Header() {
               />
             )}
           </svg>
-        </button>
+          </button>
+        </div>
       </nav>
 
       {open && (

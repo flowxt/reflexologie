@@ -21,11 +21,12 @@ const dancingScript = Dancing_Script({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Delphine Eminet — Réflexologie à Saint-Jorioz & Annecy",
-    template: "%s — Delphine Eminet, réflexologue",
+    default:
+      "Réflexologue à Annecy & Saint-Jorioz — Delphine Eminet | Réservation en ligne",
+    template: "%s — Delphine Eminet, réflexologue à Annecy",
   },
   description:
-    "Delphine Eminet, sage-femme de formation devenue réflexologue. Réflexologie plantaire & palmaire à Saint-Jorioz et Annecy. Gestion du stress, de l'anxiété et des angoisses, de 0 à 110 ans.",
+    "Réflexologie plantaire & palmaire à Annecy et Saint-Jorioz par Delphine Eminet, sage-femme de formation. Stress, sommeil, anxiété, douleurs : 1ʳᵉ séance 1h30 à 75 €. Avis Google 5★. Réservez votre créneau en ligne.",
   keywords: [
     "réflexologie",
     "réflexologue",
@@ -48,9 +49,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Delphine Eminet — Réflexologie",
+    title: "Réflexologue à Annecy & Saint-Jorioz — Delphine Eminet",
     description:
-      "Réflexologie plantaire & palmaire à Saint-Jorioz et Annecy. Prendre soin, de 0 à 110 ans.",
+      "Stress, sommeil, anxiété, douleurs : réflexologie plantaire & palmaire par une sage-femme de formation. 1ʳᵉ séance 1h30 à 75 €. Réservation en ligne.",
     url: SITE.url,
     siteName: "Delphine Eminet — Réflexologue",
     type: "website",
@@ -74,15 +75,35 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "HealthAndBeautyBusiness"],
     name: "Delphine Eminet — Réflexologue",
     description:
-      "Réflexologie plantaire & palmaire à Saint-Jorioz et Annecy, pour la gestion du stress, de l'anxiété et des angoisses.",
+      "Réflexologie plantaire & palmaire à Annecy et Saint-Jorioz, pour la gestion du stress, de l'anxiété, du sommeil et des douleurs.",
     url: SITE.url,
     telephone: SITE.phone,
     email: SITE.email,
     image: `${SITE.url}/photo/delphine-new.jpeg`,
-    areaServed: ["Saint-Jorioz", "Annecy", "Haute-Savoie"],
+    priceRange: "25 € - 75 €",
+    areaServed: ["Annecy", "Saint-Jorioz", "Haute-Savoie"],
+    address: [
+      {
+        "@type": "PostalAddress",
+        addressLocality: "Annecy",
+        addressRegion: "Haute-Savoie",
+        addressCountry: "FR",
+      },
+      {
+        "@type": "PostalAddress",
+        addressLocality: "Saint-Jorioz",
+        addressRegion: "Haute-Savoie",
+        addressCountry: "FR",
+      },
+    ],
+    potentialAction: {
+      "@type": "ReserveAction",
+      target: `${SITE.url}/reservation`,
+      name: "Réserver une séance de réflexologie",
+    },
     sameAs: [SITE.instagram, SITE.facebook],
   };
 

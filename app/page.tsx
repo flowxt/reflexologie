@@ -8,6 +8,7 @@ import FairySection from "@/components/FairySection";
 import SectionDivider from "@/components/SectionDivider";
 import Testimonials from "@/components/Testimonials";
 import GiftButton from "@/components/GiftButton";
+import CtaBand from "@/components/CtaBand";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default function Home() {
       <SectionDivider />
       <Cabinet />
       <Testimonials />
+      <CtaBand />
       <GiftButton />
     </>
   );

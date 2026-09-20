@@ -7,7 +7,9 @@ import { CABINETS, SITE } from "@/lib/content";
 import ReserveButton from "./ReserveButton";
 
 export default function Reservation() {
-  const [show, setShow] = useState(false);
+  // Le calendrier s'affiche directement : chaque clic supplémentaire fait
+  // perdre des réservations. On garde un état pour pouvoir le masquer si besoin.
+  const [show] = useState(true);
 
   useEffect(() => {
     if (!show) return;
@@ -119,32 +121,62 @@ export default function Reservation() {
           passé ce délai, la séance reste due.
         </p>
 
-        {/* Embed cal.com */}
-        <div className="mt-8 overflow-hidden rounded-3xl bg-white p-2 shadow-soft">
-          {show ? (
-            <div className="h-[640px] w-full overflow-auto rounded-2xl">
+        {/* Comment ça se passe — 3 étapes pour lever les freins */}
+        <ol className="mt-10 grid gap-4 sm:grid-cols-3">
+          {[
+            {
+              n: "1",
+              t: "Je choisis mon créneau",
+              d: "Directement dans le calendrier ci-dessous, à toute heure.",
+            },
+            {
+              n: "2",
+              t: "Delphine me contacte",
+              d: "Un échange avant la séance pour préparer ensemble votre accompagnement.",
+            },
+            {
+              n: "3",
+              t: "Je profite de ma séance",
+              d: "1h30 pour la première : écoute, pratique manuelle et massage bien-être.",
+            },
+          ].map((s) => (
+            <li
+              key={s.n}
+              className="glass-card flex items-start gap-3 rounded-2xl p-5 shadow-soft"
+            >
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-peacock-gradient text-sm font-bold text-white">
+                {s.n}
+              </span>
+              <div>
+                <p className="font-semibold text-peacock-800">{s.t}</p>
+                <p className="mt-1 text-sm text-ink-soft">{s.d}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+
+        {/* Embed cal.com — affiché directement */}
+        <div
+          id="calendrier"
+          className="mt-8 scroll-mt-24 overflow-hidden rounded-3xl bg-white p-2 shadow-soft"
+        >
+          <div className="bg-peacock-gradient flex flex-col items-center gap-1 rounded-2xl px-6 py-5 text-center text-white">
+            <h3 className="heading-script text-3xl text-shimmer">
+              Mes disponibilités
+            </h3>
+            <p className="text-sm text-peacock-50/90">
+              1ʳᵉ séance « Faisons connaissance » — 1h30 — 75 €. Choisissez
+              votre créneau, la confirmation est immédiate.
+            </p>
+          </div>
+          {show && (
+            <div className="mt-2 h-[640px] w-full overflow-auto rounded-2xl">
               <Cal
                 calLink={SITE.calLinkPlantaireDecouverte}
                 calOrigin={SITE.calOrigin}
                 style={{ width: "100%", height: "100%" }}
                 config={{ layout: "month_view" }}
               />
-            </div>
-          ) : (
-            <div className="bg-peacock-gradient relative flex flex-col items-center overflow-hidden rounded-2xl px-6 py-16 text-center text-white">
-              <h3 className="heading-script text-3xl text-shimmer">
-                Voir mes disponibilités
-              </h3>
-              <p className="mt-3 max-w-md text-peacock-50/90">
-                Le calendrier de réservation en ligne s&apos;affiche en un clic.
-                Réservez votre séance de réflexologie au cabinet de votre choix.
-              </p>
-              <button
-                onClick={() => setShow(true)}
-                className="mt-6 rounded-full bg-white px-8 py-3.5 font-semibold text-peacock-800 shadow-bubble transition-transform hover:scale-105"
-              >
-                Ouvrir le calendrier
-              </button>
             </div>
           )}
         </div>
